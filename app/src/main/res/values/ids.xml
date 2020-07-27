@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<string name="facebook_app_id">283051942770333</string>
+	<string name="fb_login_protocol_scheme">db5b36cecc8d03666f16cd3fc9d819ad</string>
+	<string name="twitter_consumer_key">TWITTER_CONSUMER_KEY</string>
+	<string name="twitter_consumer_secret">TWITTER_CONSUMER_SECRET</string>
+</resources>
