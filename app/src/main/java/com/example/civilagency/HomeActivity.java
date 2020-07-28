@@ -1,4 +1,4 @@
-package com.example.electedperson;
+package com.example.civilagency;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBarDrawerToggle;
@@ -52,22 +52,25 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
 
     @Override
     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-//        switch (item.getItemId()) {
-//            case R.id.logout:
-//                FirebaseAuth.getInstance().signOut();
-//                startActivity(new Intent(HomeActivity.this, LoginActivity.class));
-//                break;
+        switch (item.getItemId()) {
+            case R.id.logout:
+                FirebaseAuth.getInstance().signOut();
+                startActivity(new Intent(HomeActivity.this, LoginActivity.class));
+                break;
 //            case R.id.about_us:
 //                startActivity(new Intent(HomeActivity.this, AboutUs.class));
 //                break;
-//            case R.id.help:
-//                Intent Getintent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://vishwamshukla.intelaedu.com/"));
-//                startActivity(Getintent);
-//                break;
+            case R.id.help:
+                Intent Getintent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://vishwamshukla.intelaedu.com/"));
+                startActivity(Getintent);
+                break;
+            case R.id.map_card_view:
+                startActivity(new Intent(HomeActivity.this, MapActivity.class));
+                break;
 //            case R.id.chats:
 //                startActivity(new Intent(HomeActivity.this, ChatsActivity.class));
 //                break;
-//        }
+        }
         return false;
     }
 }

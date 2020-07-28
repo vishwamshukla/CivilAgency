@@ -64,4 +64,6 @@
     <string name="title_home">Home</string>
     <string name="title_dashboard">Dashboard</string>
     <string name="title_notifications">Notifications</string>
+
+    <string name="map_key" translatable="false">AIzaSyCtZ3HAm8-sy0U15dXluGN0Fa84IZyXs4g</string>
 </resources>
