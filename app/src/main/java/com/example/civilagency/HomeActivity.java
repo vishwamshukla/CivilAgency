@@ -5,22 +5,63 @@ import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.drawerlayout.widget.DrawerLayout;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.ProgressBar;
+import android.widget.TextView;
+import android.widget.Toast;
 
+import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.material.navigation.NavigationView;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
+import com.google.firebase.storage.FirebaseStorage;
+import com.google.firebase.storage.StorageReference;
+import com.squareup.picasso.Picasso;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Objects;
+
+import de.hdodenhof.circleimageview.CircleImageView;
 
 public class HomeActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
 
     private ActionBarDrawerToggle nToggle;
     NavigationView navigationView;
+
+    private RecyclerView mRecyclerView;
+    private ImageAdapter mImageAdapter;
+
+    private FirebaseStorage mStorage;
+    private DatabaseReference mDatabaseRef;
+    private DatabaseReference UserRef;
+
+    private ProgressBar mProgressCircle;
+
+    private ValueEventListener mDBListener;
+    private List<Upload> mUploads;
+
+    private FirebaseAuth mAuth;
+    String currentUserID;
+
+    LinearLayoutManager mlinearLayoutManager;
+
+
+    private CircleImageView profileImage;
+    private TextView nametextview;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,8 +79,93 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
         nToggle.syncState();
         Objects.requireNonNull(getSupportActionBar()).setDisplayHomeAsUpEnabled(true);
 
-        NavigationView navigationView = (NavigationView) findViewById(R.id.navView);
+        navigationView = findViewById(R.id.navView);
         navigationView.setNavigationItemSelectedListener(this);
+
+        mlinearLayoutManager = new LinearLayoutManager(this);
+        mlinearLayoutManager.setReverseLayout(true);
+        mlinearLayoutManager.setStackFromEnd(true);
+
+        mRecyclerView = findViewById(R.id.recycler_view);
+        mRecyclerView.setHasFixedSize(true);
+        mRecyclerView.setLayoutManager(mlinearLayoutManager);
+
+        mProgressCircle = findViewById(R.id.progress_circle);
+
+        mUploads = new ArrayList<>();
+        mImageAdapter = new ImageAdapter(HomeActivity.this,mUploads);
+        mRecyclerView.setAdapter(mImageAdapter);
+        mImageAdapter.setOnItemClickListener(HomeActivity.this);
+
+        mAuth = FirebaseAuth.getInstance();
+        currentUserID = mAuth.getCurrentUser().getUid();
+        Log.i("image", String.valueOf(mAuth.getCurrentUser().getPhotoUrl()));
+        Log.i("name", String.valueOf(mAuth.getCurrentUser().getDisplayName()));
+
+        View headerView = navigationView.getHeaderView(0);
+        headerView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(HomeActivity.this, ProfileActivity.class));
+            }
+        });
+        final TextView userNameTextView = headerView.findViewById(R.id.name_textView);
+        final CircleImageView profileImageView = headerView.findViewById(R.id.nav_header_profile_imageView);
+
+        UserRef = FirebaseDatabase.getInstance().getReference("Individual Reports");
+
+        UserRef.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(DataSnapshot dataSnapshot)
+            {
+                if (dataSnapshot.exists())
+                {
+                    if (dataSnapshot.child("image").exists())
+                    {
+                        String image = String.valueOf(dataSnapshot.child("image").getValue());
+                        //String name = String.valueOf(dataSnapshot.child("name").getValue());
+
+                        Picasso.get().load(image).into(profileImageView);
+                        //userNameTextView.setText(name);
+
+                    }
+                    String name = String.valueOf(dataSnapshot.child("name").getValue());
+                    userNameTextView.setText(name);
+                }
+            }
+
+            @Override
+            public void onCancelled(DatabaseError databaseError) {
+
+            }
+        });
+
+        mStorage = FirebaseStorage.getInstance();
+        mDatabaseRef = FirebaseDatabase.getInstance().getReference("Individual Reports");
+
+        mDBListener = mDatabaseRef.addValueEventListener(new ValueEventListener() {
+
+            @Override
+            public void onDataChange(DataSnapshot snapshot) {
+
+                mUploads.clear();
+
+                for (DataSnapshot postSnapshot : snapshot.getChildren()){
+                    Upload upload = postSnapshot.getValue(Upload.class);
+                    upload.setKey(postSnapshot.getKey());
+                    mUploads.add(upload);
+                }
+
+                mImageAdapter.notifyDataSetChanged();
+                mProgressCircle.setVisibility(View.INVISIBLE);
+            }
+            @Override
+            public void onCancelled(DatabaseError error) {
+                Toast.makeText(HomeActivity.this, error.getMessage(), Toast.LENGTH_SHORT).show();
+                mProgressCircle.setVisibility(View.INVISIBLE);
+            }
+        });
+
     }
 
     @Override
@@ -72,5 +198,35 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
 //                break;
         }
         return false;
+    }
+
+    public void onItemClick(int position) {
+        Toast.makeText(this, "Report No "+ position , Toast.LENGTH_SHORT).show();
+    }
+    public void onDeleteClick(int position) {
+        Upload selectedItem = mUploads.get(position);
+        final String selectedKey = selectedItem.getKey();
+
+        StorageReference imageRef = mStorage.getReferenceFromUrl(selectedItem.getImageUrl());
+        imageRef.delete().addOnSuccessListener(new OnSuccessListener<Void>() {
+            @Override
+            public void onSuccess(Void aVoid) {
+                mDatabaseRef.child(selectedKey).removeValue();
+                Toast.makeText(HomeActivity.this, "Item Deleted", Toast.LENGTH_SHORT).show();
+            }
+        });
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        mDatabaseRef.removeEventListener(mDBListener);
+    }
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        finishAffinity();
+        finish();
     }
 }
