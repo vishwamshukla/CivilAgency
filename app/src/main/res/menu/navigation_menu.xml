@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+
+
+        <item android:id="@+id/home"
+            android:icon="@drawable/ic_baseline_home_24"
+            android:title="Home"/>
+
+        <item android:id="@+id/map_card_view"
+            android:icon="@drawable/ic_baseline_map_24"
+            android:title="Map view"/>
+
+        <item android:id="@+id/report_pothole_using_trip"
+            android:icon="@drawable/ic_baseline_directions_car_24"
+            android:title="Report potholes using a trip"/>
+
+        <item android:id="@+id/chats"
+            android:icon="@drawable/ic_round_message_24"
+            android:title="Chats"/>
+
+        <item android:id="@+id/history"
+            android:icon="@drawable/ic_baseline_history_24"
+            android:title="History"/>
+
+        <item android:id="@+id/logout"
+            android:icon="@drawable/logout"
+            android:title="Logout"/>
+    </group>
+
+    <item android:title="Communication">
+        <menu>
+            <item android:id="@+id/help"
+                android:icon="@drawable/ic_menu_send"
+                android:title="Help"/>
+            <item android:id="@+id/about_us"
+                android:icon="@drawable/ic_android_black_24dp"
+                android:title="About us"/>
+        </menu>
+    </item>
+</menu>

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/nav_header"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/colorPrimaryDark"
+    android:clickable="true"
+    android:focusable="true"
+    android:foreground="?attr/selectableItemBackgroundBorderless"
+    android:gravity="bottom"
+    android:orientation="vertical"
+    android:theme="@style/ThemeOverlay.AppCompat.Dark">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:elevation="5dp"
+        android:paddingStart="15dp"
+        android:paddingTop="15dp"
+        android:layout_alignParentTop="true"
+        android:id="@+id/nav_header_profile_imageView"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:src="@drawable/default_profile_image" />
+
+    <TextView
+        android:elevation="5dp"
+        android:paddingStart="15dp"
+        android:paddingBottom="15dp"
+        android:textColor="@color/White"
+        android:layout_below="@id/nav_header_profile_imageView"
+        android:layout_marginTop="15dp"
+        android:id="@+id/name_textView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="17.5sp"
+        android:textStyle="bold"/>
+
+    <ImageView
+        android:elevation="5dp"
+        android:padding="15dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:id="@+id/edit_profile_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_round_edit_24"/>
+
+</RelativeLayout>
