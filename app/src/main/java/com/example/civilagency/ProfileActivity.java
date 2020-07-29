@@ -57,7 +57,7 @@
          storageProfilePrictureRef = FirebaseStorage.getInstance().getReference().child("Civil Agencies Profiles");
          mAuth = FirebaseAuth.getInstance();
          currentUserID = mAuth.getCurrentUser().getUid();
-         UsersRef = FirebaseDatabase.getInstance().getReference().child("Users").child("Civil Agencies").child(currentUserID);
+         UsersRef = FirebaseDatabase.getInstance().getReference().child("Users").child("Civil").child(currentUserID);
 
          totalPotholeReported = findViewById(R.id.total_pothole_reported);
 
@@ -109,7 +109,7 @@
 
      private void updateOnlyUserInfo()
      {
-         DatabaseReference ref = FirebaseDatabase.getInstance().getReference().child("Users").child("Civil Agencies");
+         DatabaseReference ref = FirebaseDatabase.getInstance().getReference().child("Users").child("Civil");
 
          HashMap<String, Object> userMap = new HashMap<>();
          userMap.put("name", name1.getEditText().getText().toString());
@@ -210,7 +210,7 @@
                                  Uri downloadUrl = task.getResult();
                                  myUrl = downloadUrl.toString();
 
-                                 DatabaseReference ref = FirebaseDatabase.getInstance().getReference().child("Users").child("Civil Agencies");
+                                 DatabaseReference ref = FirebaseDatabase.getInstance().getReference().child("Users").child("Civil");
 
                                  HashMap<String, Object> userMap = new HashMap<>();
                                  userMap.put("name", name1.getEditText().getText().toString());
@@ -243,7 +243,7 @@
      }
 
      private void userInfoDisplay(final CircleImageView profileImageView1, final TextInputLayout name1, final TextInputLayout username1, final TextInputLayout email1, final TextInputLayout phone1) {
-         DatabaseReference UsersRef = FirebaseDatabase.getInstance().getReference().child("Users").child("Civil Agencies").child(currentUserID);
+         DatabaseReference UsersRef = FirebaseDatabase.getInstance().getReference().child("Users").child("Civil").child(currentUserID);
          DatabaseReference CountRef = FirebaseDatabase.getInstance().getReference("Individual Reports");
 
          CountRef.addValueEventListener(new ValueEventListener() {

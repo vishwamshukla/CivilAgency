@@ -120,7 +120,7 @@ public class HomeActivity extends AppCompatActivity implements ImageAdapter.OnIt
         final TextView userNameTextView = headerView.findViewById(R.id.name_textView);
         final CircleImageView profileImageView = headerView.findViewById(R.id.nav_header_profile_imageView);
 
-        UserRef = FirebaseDatabase.getInstance().getReference("Individual Reports");
+        UserRef = FirebaseDatabase.getInstance().getReference("Users").child("Civil").child(currentUserID);
 
         UserRef.addValueEventListener(new ValueEventListener() {
             @Override
