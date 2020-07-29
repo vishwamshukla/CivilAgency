@@ -71,7 +71,7 @@ public class DetailsPothole extends AppCompatActivity {
         TextView dimension_textView = findViewById(R.id.pothole_dimension_textview);
         TextView comment_textView = findViewById(R.id.potholes_comments_textview);
 
-        Picasso.get().load(imageUrl).fit().centerCrop().into(imageView);
+        Picasso.get().load(imageUrl).fit().into(imageView);
         pothole_type_textView.setText(potholeType);
         landmark_textView.setText(landmark);
         address_textView.setText(address);
