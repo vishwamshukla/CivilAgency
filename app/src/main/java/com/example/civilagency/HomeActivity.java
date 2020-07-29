@@ -37,7 +37,15 @@ import java.util.Objects;
 
 import de.hdodenhof.circleimageview.CircleImageView;
 
-public class HomeActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
+public class HomeActivity extends AppCompatActivity implements ImageAdapter.OnItemClickListener,NavigationView.OnNavigationItemSelectedListener {
+
+    public static final String EXTRA_URL = "image url";
+    public static final String EXTRA_POTHOLE_TYPE = "pothole type";
+    public static final String EXTRA_LANDMARK = "landmark";
+    public static final String EXTRA_ADDRESS = "address";
+    public static final String EXTRA_DIMENSION = "dimension";
+    public static final String EXTRA_COMMENT = "comment";
+
 
     private ActionBarDrawerToggle nToggle;
     NavigationView navigationView;
@@ -201,7 +209,19 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
     }
 
     public void onItemClick(int position) {
-        Toast.makeText(this, "Report No "+ position , Toast.LENGTH_SHORT).show();
+
+        Intent detailIntent = new Intent(this,DetailsPothole.class);
+        Upload clickeditem = mUploads.get(position);
+
+        detailIntent.putExtra(EXTRA_URL, clickeditem.getImageUrl());
+        detailIntent.putExtra(EXTRA_POTHOLE_TYPE, clickeditem.getmPotholeType());
+        detailIntent.putExtra(EXTRA_ADDRESS, clickeditem.getmAddress());
+        detailIntent.putExtra(EXTRA_LANDMARK, clickeditem.getmLandmark());
+        detailIntent.putExtra(EXTRA_DIMENSION, clickeditem.getmDimension());
+        detailIntent.putExtra(EXTRA_COMMENT, clickeditem.getmComment());
+
+        startActivity(detailIntent);
+
     }
     public void onDeleteClick(int position) {
         Upload selectedItem = mUploads.get(position);

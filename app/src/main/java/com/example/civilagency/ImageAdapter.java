@@ -21,8 +21,17 @@ import java.util.List;
 public class ImageAdapter extends RecyclerView.Adapter<ImageAdapter.ImageViewHolder> {
     private Context mContext;
     private List<Upload> mUploads;
-    private HomeActivity mListener;
+    private OnItemClickListener mListener;
     public int prog = 0;
+
+    public interface OnItemClickListener{
+        void onItemClick(int position);
+        void onDeleteClick(int position);
+    }
+
+    public void setOnItemClickListener(OnItemClickListener listener){
+        mListener = listener;
+    }
 
     public enum Progress {
         Reported,
@@ -83,7 +92,7 @@ public class ImageAdapter extends RecyclerView.Adapter<ImageAdapter.ImageViewHol
     public int getItemCount() {
         return mUploads.size();
     }
-    public class ImageViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener,
+    public class ImageViewHolder extends RecyclerView.ViewHolder implements
             View.OnCreateContextMenuListener, MenuItem.OnMenuItemClickListener {
         public TextView textViewPotholeType;
         public TextView textViewLandmark;
@@ -103,7 +112,17 @@ public class ImageAdapter extends RecyclerView.Adapter<ImageAdapter.ImageViewHol
             potholeStaus = itemView.findViewById(R.id.text_view_pothole_status);
             date = itemView.findViewById(R.id.text_view_pothole_date);
 
-            itemView.setOnClickListener(this);
+            itemView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    if (mListener != null){
+                        int position = getAdapterPosition();
+                        if (position != RecyclerView.NO_POSITION){
+                            mListener.onItemClick(position);
+                        }
+                    }
+                }
+            });
             itemView.setOnCreateContextMenuListener(this);
         }
 
@@ -120,16 +139,6 @@ public class ImageAdapter extends RecyclerView.Adapter<ImageAdapter.ImageViewHol
             return false;
         }
 
-        @Override
-        public void onClick(View view) {
-            if (mListener != null){
-                int position = getAdapterPosition();
-                if (position!= RecyclerView.NO_POSITION){
-                    mListener.onItemClick(position);
-                }
-            }
-
-        }
 
         @Override
         public void onCreateContextMenu(ContextMenu contextMenu, View view, ContextMenu.ContextMenuInfo contextMenuInfo) {
@@ -139,13 +148,8 @@ public class ImageAdapter extends RecyclerView.Adapter<ImageAdapter.ImageViewHol
         }
     }
 
-    public interface OnItemClickListener{
-        void onItemClick(int position);
-        void onDeleteClick(int position);
-    }
-    public void setOnItemClickListener(HomeActivity listener) {
-        mListener = listener;
-    }
+
+
 
 }
 
