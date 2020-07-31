@@ -5,13 +5,13 @@ import com.google.firebase.database.Exclude;
 
 public class Upload {
 
-    private String mImageUrl, mPotholeType, mAddress,mLandmark,mDimension, mComment, mDate, mDateFull, mTime, videourl;
+    private String mImageUrl, mPotholeType, mAddress,mLandmark,mDimension, mComment, mDate, mDateFull, mTime, videourl, mPhone, mTimeKey;
     private String mKey;
     private String VideoDescription;
     private String VideoUri;
 
 
-    public Upload(String ImageUrl, String mPotholeType, String mAddress, String mLandmark, String mDimension, String mComment, String mDate, String mDateFull, String mTime) {
+    public Upload(String ImageUrl, String mPotholeType, String mAddress, String mLandmark, String mDimension, String mComment, String mDate, String mDateFull, String mTime, String mPhone, String mTimeKey) {
         this.mImageUrl = ImageUrl;
         this.mPotholeType = mPotholeType;
         this.mAddress = mAddress;
@@ -22,7 +22,8 @@ public class Upload {
         this.mDate = mDate;
         this.mDateFull = mDateFull;
         this.mTime = mTime;
-
+        this.mPhone = mPhone;
+        this.mTimeKey = mTimeKey;
 
 
 
@@ -104,7 +105,21 @@ public class Upload {
         this.mTime = mTime;
     }
 
+    public String getmTimeKey() {
+        return mTimeKey;
+    }
 
+    public void setmTimeKey(String mTimeKey) {
+        this.mTimeKey = mTimeKey;
+    }
+
+    public String getmPhone() {
+        return mPhone;
+    }
+
+    public void setmPhone(String mPhone) {
+        this.mPhone = mPhone;
+    }
 
     @Exclude
 

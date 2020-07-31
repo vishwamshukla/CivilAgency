@@ -17,13 +17,16 @@ import android.widget.SeekBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.cardview.widget.CardView;
 import androidx.core.content.ContextCompat;
 
+import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
@@ -31,6 +34,7 @@ import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.StorageReference;
 import com.squareup.picasso.Picasso;
 
+import java.util.HashMap;
 import java.util.List;
 
 
@@ -42,6 +46,8 @@ public class DetailsPothole extends AppCompatActivity {
     public static final String EXTRA_ADDRESS = "address";
     public static final String EXTRA_DIMENSION = "dimension";
     public static final String EXTRA_COMMENT = "comment";
+    public static final String EXTRA_PHONE = "phone";
+    public static final String EXTRA_TIMEKEY = "timeKey";
 
     Button button_update_pothole_status;
 
@@ -66,6 +72,8 @@ public class DetailsPothole extends AppCompatActivity {
     private TextView button_remove_image;
 
 
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -80,7 +88,7 @@ public class DetailsPothole extends AppCompatActivity {
         mAuth = FirebaseAuth.getInstance();
         currentUserID = mAuth.getCurrentUser().getUid();
         mStorage = FirebaseStorage.getInstance();
-        mDatabaseRef = FirebaseDatabase.getInstance().getReference("Users").child("Citizens").child(currentUserID).child("potholeReports");
+        mDatabaseRef = FirebaseDatabase.getInstance().getReference("Reports");
         back_btn =findViewById(R.id.p_button_back);
         back_btn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -96,6 +104,8 @@ public class DetailsPothole extends AppCompatActivity {
         String address = intent.getStringExtra(EXTRA_ADDRESS);
         String dimension = intent.getStringExtra(EXTRA_DIMENSION);
         String comment = intent.getStringExtra(EXTRA_COMMENT);
+        String phone = intent.getStringExtra(EXTRA_PHONE);
+        final String timeKey = intent.getStringExtra(EXTRA_TIMEKEY);
 
         ImageView imageView = findViewById(R.id.pothole_image_view);
         TextView pothole_type_textView = findViewById(R.id.pothole_type_textView);
@@ -103,6 +113,8 @@ public class DetailsPothole extends AppCompatActivity {
         TextView address_textView = findViewById(R.id.pothole_address_textView);
         TextView dimension_textView = findViewById(R.id.pothole_dimension_textview);
         TextView comment_textView = findViewById(R.id.potholes_comments_textview);
+        TextView phone_textView = findViewById(R.id.potholes_phonenumber);
+        final TextView mTimeKey = findViewById(R.id.potholes_timekey);
 
         Picasso.get().load(imageUrl).fit().into(imageView);
         pothole_type_textView.setText(potholeType);
@@ -110,6 +122,8 @@ public class DetailsPothole extends AppCompatActivity {
         address_textView.setText(address);
         dimension_textView.setText(dimension);
         comment_textView.setText(comment);
+        phone_textView.setText(phone);
+        mTimeKey.setText(timeKey);
 
         final SeekBar severity_seekBar = findViewById(R.id.seekbar_bar_pothole);
         severity_seekBar.getThumb().setColorFilter(ContextCompat.getColor(getApplicationContext(), R.color.colorPrimary), PorterDuff.Mode.SRC_IN);
@@ -119,6 +133,7 @@ public class DetailsPothole extends AppCompatActivity {
 
         switch (progress_of_pothole){
             case 0:
+                break;
             case 1:
                 text_view_pothole_status.setText(Progress.Reported.toString());
                 severity_seekBar.getProgressDrawable().setColorFilter(Color.parseColor("#f44336"), PorterDuff.Mode.SRC_IN);
@@ -185,7 +200,22 @@ public class DetailsPothole extends AppCompatActivity {
                         findViewById(R.id.proof_view_button_continue).setOnClickListener(new View.OnClickListener() {
                             @Override
                             public void onClick(View view) {
-                                //TODO: Do backend work here.
+                                DatabaseReference ref = FirebaseDatabase.getInstance().getReference().child("Reports").child(timeKey);
+                                DatabaseReference ref1 = FirebaseDatabase.getInstance().getReference().child("users").child("Citizens").child(timeKey);
+//                                String mStatus = text_view_pothole_status.getText().toString();
+//                                Upload1 upload = new Upload1(mStatus);
+//                                ref.push().setValue(upload);
+
+
+                                HashMap<String, Object> userMap = new HashMap<>();
+                                userMap.put("status", text_view_pothole_status.getText().toString());
+                                ref.updateChildren(userMap).addOnCompleteListener(new OnCompleteListener<Void>() {
+                                    @Override
+                                    public void onComplete(@NonNull Task<Void> task) {
+                                        Toast.makeText(DetailsPothole.this, "Updated", Toast.LENGTH_SHORT).show();
+                                    }
+                                });
+
                                 layout_proof.setVisibility(View.GONE);
                             }
                         });
@@ -262,16 +292,16 @@ public class DetailsPothole extends AppCompatActivity {
         return true;
     }
 
-    private void onDeleteClick(int position) {
-        Upload selectedItem = mUploads.get(position);
-        final String selectedKey = selectedItem.getKey();
-        StorageReference imageRef = mStorage.getReferenceFromUrl(selectedItem.getImageUrl());
-        imageRef.delete().addOnSuccessListener(new OnSuccessListener<Void>() {
-            @Override
-            public void onSuccess(Void aVoid) {
-                mDatabaseRef.child(selectedKey).removeValue();
-                Toast.makeText(DetailsPothole.this, "Item Deleted", Toast.LENGTH_SHORT).show();
-            }
-        });
-    }
+//    private void onDeleteClick(int position) {
+//        Upload selectedItem = mUploads.get(position);
+//        final String selectedKey = selectedItem.getKey();
+//        StorageReference imageRef = mStorage.getReferenceFromUrl(selectedItem.getImageUrl());
+//        imageRef.delete().addOnSuccessListener(new OnSuccessListener<Void>() {
+//            @Override
+//            public void onSuccess(Void aVoid) {
+//                mDatabaseRef.child(selectedKey).removeValue();
+//                Toast.makeText(DetailsPothole.this, "Item Deleted", Toast.LENGTH_SHORT).show();
+//            }
+//        });
+//    }
 }

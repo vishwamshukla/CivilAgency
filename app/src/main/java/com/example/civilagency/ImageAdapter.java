@@ -100,6 +100,7 @@ public class ImageAdapter extends RecyclerView.Adapter<ImageAdapter.ImageViewHol
         public ProgressBar mprogressBar;
         public TextView potholeStaus;
         public TextView date;
+        public TextView phone;
 
 
         public ImageViewHolder(View itemView) {
@@ -111,6 +112,7 @@ public class ImageAdapter extends RecyclerView.Adapter<ImageAdapter.ImageViewHol
             mprogressBar = itemView.findViewById(R.id.progress_bar_pothole);
             potholeStaus = itemView.findViewById(R.id.text_view_pothole_status);
             date = itemView.findViewById(R.id.text_view_pothole_date);
+            phone = itemView.findViewById(R.id.potholes_phonenumber);
 
             itemView.setOnClickListener(new View.OnClickListener() {
                 @Override
