@@ -10,6 +10,8 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import android.annotation.SuppressLint;
 import android.content.Intent;
+import android.content.SharedPreferences;
+import android.content.res.Configuration;
 import android.net.Uri;
 import android.os.Bundle;
 import android.util.Log;
@@ -33,6 +35,7 @@ import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Locale;
 import java.util.Objects;
 
 import de.hdodenhof.circleimageview.CircleImageView;
@@ -48,7 +51,7 @@ public class HomeActivity extends AppCompatActivity implements ImageAdapter.OnIt
     public static final String EXTRA_PHONE = "phone";
     public static final String EXTRA_TIMEKEY = "timeKey";
 
-
+    private String Lang;
     private ActionBarDrawerToggle nToggle;
     NavigationView navigationView;
 
@@ -76,6 +79,7 @@ public class HomeActivity extends AppCompatActivity implements ImageAdapter.OnIt
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
         setContentView(R.layout.activity_home);
 
         @SuppressLint("WrongViewCast") Toolbar my_toolbar = findViewById(R.id.actionBar);
@@ -192,9 +196,9 @@ public class HomeActivity extends AppCompatActivity implements ImageAdapter.OnIt
         }
         return super.onOptionsItemSelected(item);
     }
-
     @Override
     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+        String languageToLoad = "en";
         switch (item.getItemId()) {
             case R.id.logout:
                 FirebaseAuth.getInstance().signOut();
@@ -213,9 +217,35 @@ public class HomeActivity extends AppCompatActivity implements ImageAdapter.OnIt
 //            case R.id.chats:
 //                startActivity(new Intent(HomeActivity.this, ChatsActivity.class));
 //                break;
+            //case R.id.hi:
+               // Lang=("hi-rIN");
+                //break;
+            //case R.id.gu:
+              //  Lang=("gu-rIN");
+                //break;
+
+            //case R.id.ta:
+            //  Lang=("ta-rIN");
+                //break;
+
+   //         case R.id.pa:
+ //               Lang=("pa-rIN");
+  //              break;
+
+    //        case R.id.mr:
+      //          Lang=("mr-rIN");
+        //        break;
+          //  default:
+            //    break;
         }
+        Locale locale = new Locale(Lang);
+        Locale.setDefault(locale);
+        Configuration config = new Configuration();
+        config.locale = locale;
+        getBaseContext().getResources().updateConfiguration(config, getBaseContext().getResources().getDisplayMetrics());
         return false;
     }
+
 
     public void onItemClick(int position) {
 
@@ -249,12 +279,12 @@ public class HomeActivity extends AppCompatActivity implements ImageAdapter.OnIt
     }
 
     @Override
-    protected void onDestroy() {
-        super.onDestroy();
-        mDatabaseRef.removeEventListener(mDBListener);
-    }
+    protected void onDestroy(){
+            super.onDestroy();
+            mDatabaseRef.removeEventListener(mDBListener);
+        }
 
-    @Override
+        @Override
     public void onBackPressed() {
         super.onBackPressed();
         finishAffinity();
