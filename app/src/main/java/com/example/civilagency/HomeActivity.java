@@ -91,8 +91,8 @@ public class HomeActivity extends AppCompatActivity implements ImageAdapter.OnIt
         navigationView.setNavigationItemSelectedListener(this);
 
         mlinearLayoutManager = new LinearLayoutManager(this);
-        mlinearLayoutManager.setReverseLayout(true);
-        mlinearLayoutManager.setStackFromEnd(true);
+//        mlinearLayoutManager.setReverseLayout(true);
+//        mlinearLayoutManager.setStackFromEnd(true);
 
         mRecyclerView = findViewById(R.id.recycler_view);
         mRecyclerView.setHasFixedSize(true);
