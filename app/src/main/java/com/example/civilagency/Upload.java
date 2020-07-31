@@ -5,13 +5,13 @@ import com.google.firebase.database.Exclude;
 
 public class Upload {
 
-    private String mImageUrl, mPotholeType, mAddress,mLandmark,mDimension, mComment, mDate, mDateFull, mTime, videourl, mPhone, mTimeKey, mUserId;
+    private String mImageUrl, mPotholeType, mAddress,mLandmark,mDimension, mComment, mDate, mDateFull, mTime, videourl, mSeverity, mPhone, mTimeKey, mUserId, status;
     private String mKey;
     private String VideoDescription;
     private String VideoUri;
 
 
-    public Upload(String ImageUrl, String mPotholeType, String mAddress, String mLandmark, String mDimension, String mComment, String mDate, String mDateFull, String mTime, String mPhone, String mTimeKey, String mUserId) {
+    public Upload(String ImageUrl, String mPotholeType, String mAddress, String mLandmark, String mDimension, String mComment, String mDate, String mDateFull, String mTime, String mSeverity, String mPhone, String mTimeKey, String mUserId, String status) {
         this.mImageUrl = ImageUrl;
         this.mPotholeType = mPotholeType;
         this.mAddress = mAddress;
@@ -22,9 +22,11 @@ public class Upload {
         this.mDate = mDate;
         this.mDateFull = mDateFull;
         this.mTime = mTime;
+        this.mSeverity = mSeverity;
         this.mPhone = mPhone;
         this.mTimeKey = mTimeKey;
         this.mUserId = mUserId;
+        this.status = status;
 
 
     }
@@ -105,6 +107,14 @@ public class Upload {
         this.mTime = mTime;
     }
 
+    public String getmSeverity() {
+        return mSeverity;
+    }
+
+    public void setmSeverity(String mSeverity) {
+        this.mSeverity = mSeverity;
+    }
+
     public String getmTimeKey() {
         return mTimeKey;
     }
@@ -127,6 +137,14 @@ public class Upload {
 
     public void setmUserId(String mUserId) {
         this.mUserId = mUserId;
+    }
+
+    public String getStatus() {
+        return status;
+    }
+
+    public void setStatus(String status) {
+        this.status = status;
     }
 
     @Exclude

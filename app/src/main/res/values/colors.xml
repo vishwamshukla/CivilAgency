@@ -34,5 +34,10 @@
     <color name="DarkGrey">#737373 </color>
     <color name="Black">#000 </color>
 
+    <color name="severity_level1">#00FF00</color>
+    <color name="severity_level2">#D6FF00</color>
+    <color name="severity_level3">#FFFF00</color>
+    <color name="severity_level4">#FFC100</color>
+    <color name="severity_level5">#FF0000</color>
 
 </resources>
