@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Potholes+ for Civil Agencies</string>
+    <string name="app_name">Potholes+ (CA)</string>
     <string name="open">Open</string>
     <string name="close">Close</string>
     <string name="title_activity_home2" translatable="false">Home2Activity</string>

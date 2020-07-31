@@ -95,8 +95,8 @@ public class HomeActivity extends AppCompatActivity implements ImageAdapter.OnIt
         navigationView.setNavigationItemSelectedListener(this);
 
         mlinearLayoutManager = new LinearLayoutManager(this);
-        mlinearLayoutManager.setReverseLayout(true);
-        mlinearLayoutManager.setStackFromEnd(true);
+//        mlinearLayoutManager.setReverseLayout(true);
+//        mlinearLayoutManager.setStackFromEnd(true);
 
         mRecyclerView = findViewById(R.id.recycler_view);
         mRecyclerView.setHasFixedSize(true);
@@ -175,6 +175,13 @@ public class HomeActivity extends AppCompatActivity implements ImageAdapter.OnIt
             public void onCancelled(DatabaseError error) {
                 Toast.makeText(HomeActivity.this, error.getMessage(), Toast.LENGTH_SHORT).show();
                 mProgressCircle.setVisibility(View.INVISIBLE);
+            }
+        });
+
+        findViewById(R.id.report_pothole_add_button).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(HomeActivity.this, ReportPotholeActivity.class));
             }
         });
 
