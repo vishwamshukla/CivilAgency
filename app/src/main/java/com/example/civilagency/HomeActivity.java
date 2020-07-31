@@ -174,6 +174,13 @@ public class HomeActivity extends AppCompatActivity implements ImageAdapter.OnIt
             }
         });
 
+        findViewById(R.id.report_pothole_add_button).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(HomeActivity.this, ReportPotholeActivity.class));
+            }
+        });
+
     }
 
     @Override
