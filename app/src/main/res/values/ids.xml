@@ -5,4 +5,12 @@
 	<string name="twitter_consumer_key" translatable="false">TWITTER_CONSUMER_KEY</string>
 	<string name="twitter_consumer_secret" translatable="false">TWITTER_CONSUMER_SECRET</string>
     <item name="gu" type="id" />
+    <item name="seekbar_bar_pothole" type="id" />
+	<item name="button_update_pothole_status" type="id" />
+	<item name="layout_proof" type="id" />
+	<item name="proof_view_pothole_remove_image_button" type="id" />
+	<item name="proof_view_pothole_image_view" type="id" />
+	<item name="proof_view_button_continue" type="id" />
+	<item name="proof_view_button_cancel" type="id" />
+	<item name="proof_view_upload_image_hint_view" type="id" />
 </resources>

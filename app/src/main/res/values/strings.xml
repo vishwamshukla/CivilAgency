@@ -88,13 +88,10 @@
 
     <string name="completed">Completed</string>
     <string name="image">Image</string>
-    <string name="location">Location</string>
     <string name="type">Type</string>
-    <string name="landmark">Landmark</string>
     <string name="dimensions">Dimensions</string>
     <string name="back">Back</string>
     <string name="report_status">Report Status:</string>
-    <string name="address">Address</string>
     <string name="comments">Comments</string>
     <string name="sign_in_to_continue">Sign in to continue</string>
     <string name="email1">Email</string>
@@ -120,6 +117,20 @@
     <string name="welcome">Welcome</string>
     <string name="go1">Go</string>
     <string name="logout">Logout</string>
+    <string name="take_image_of_pothole">Take image of pothole</string>
+    <string name="camera">Camera |</string>
+    <string name="gallery">Gallery</string>
+    <string name="remove_image">Remove Image</string>
+    <string name="severity_of_pothole">Severity of Pothole</string>
+    <string name="type_of_pothole">Type of Pothole</string>
+    <string name="landmark">Landmark</string>
+    <string name="address">Address</string>
+    <string name="location">Location</string>
+    <string name="tap_here_to_modify">Tap here to Modify</string>
+    <string name="upload_image">Upload Image:</string>
+    <string name="comments_optional">Comments (Optional)</string>
+    <string name="is_this_the_right_number_to_contact_you">Is this the right number to contact you?</string>
+    <string name="dimensions_optional">Dimensions (Optional)</string>
 
 
 </resources>

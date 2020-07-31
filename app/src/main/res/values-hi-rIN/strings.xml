@@ -51,4 +51,15 @@
     <string name="email3">ईमेल</string>
     <string name="go1">जाओ</string>
     <string name="logout">लॉग आउट</string>
+    <string name="upload_image">तसवीर डालें:</string>
+    <string name="take_image_of_pothole">गड्ढों की तस्वीर लें:</string>
+    <string name="camera">कैमरा |</string>
+    <string name="gallery">गेलरी</string>
+    <string name="remove_image">चित्र हटाओ</string>
+    <string name="severity_of_pothole">गड्ढे की गंभीरता</string>
+    <string name="type_of_pothole">गड्ढे का प्रकार</string>
+    <string name="tap_here_to_modify">संशोधित करने के लिए यहां टैप करें</string>
+    <string name="comments_optional">टिप्पणियां (वैकल्पिक)</string>
+    <string name="is_this_the_right_number_to_contact_you">क्या यह आपसे संपर्क करने के लिए सही संख्या है?</string>
+    <string name="dimensions_optional">आयाम (वैकल्पिक)</string>
 </resources>
