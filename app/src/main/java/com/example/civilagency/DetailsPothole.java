@@ -48,6 +48,7 @@ public class DetailsPothole extends AppCompatActivity {
     public static final String EXTRA_COMMENT = "comment";
     public static final String EXTRA_PHONE = "phone";
     public static final String EXTRA_TIMEKEY = "timeKey";
+    public static final String EXTRA_USERID = "userId";
 
     Button button_update_pothole_status;
 
@@ -106,6 +107,7 @@ public class DetailsPothole extends AppCompatActivity {
         String comment = intent.getStringExtra(EXTRA_COMMENT);
         String phone = intent.getStringExtra(EXTRA_PHONE);
         final String timeKey = intent.getStringExtra(EXTRA_TIMEKEY);
+        final String userId = intent.getStringExtra(EXTRA_USERID);
 
         ImageView imageView = findViewById(R.id.pothole_image_view);
         TextView pothole_type_textView = findViewById(R.id.pothole_type_textView);
@@ -115,6 +117,7 @@ public class DetailsPothole extends AppCompatActivity {
         TextView comment_textView = findViewById(R.id.potholes_comments_textview);
         TextView phone_textView = findViewById(R.id.potholes_phonenumber);
         final TextView mTimeKey = findViewById(R.id.potholes_timekey);
+        final TextView muId = findViewById(R.id.potholes_uid);
 
         Picasso.get().load(imageUrl).fit().into(imageView);
         pothole_type_textView.setText(potholeType);
@@ -124,6 +127,7 @@ public class DetailsPothole extends AppCompatActivity {
         comment_textView.setText(comment);
         phone_textView.setText(phone);
         mTimeKey.setText(timeKey);
+        muId.setText(userId);
 
         final SeekBar severity_seekBar = findViewById(R.id.seekbar_bar_pothole);
         severity_seekBar.getThumb().setColorFilter(ContextCompat.getColor(getApplicationContext(), R.color.colorPrimary), PorterDuff.Mode.SRC_IN);
@@ -201,7 +205,7 @@ public class DetailsPothole extends AppCompatActivity {
                             @Override
                             public void onClick(View view) {
                                 DatabaseReference ref = FirebaseDatabase.getInstance().getReference().child("Reports").child(timeKey);
-                                DatabaseReference ref1 = FirebaseDatabase.getInstance().getReference().child("users").child("Citizens").child(timeKey);
+                                DatabaseReference ref1 = FirebaseDatabase.getInstance().getReference().child("Users").child("Citizens").child(userId).child("potholeReports").child(timeKey);
 //                                String mStatus = text_view_pothole_status.getText().toString();
 //                                Upload1 upload = new Upload1(mStatus);
 //                                ref.push().setValue(upload);
@@ -215,6 +219,13 @@ public class DetailsPothole extends AppCompatActivity {
                                         Toast.makeText(DetailsPothole.this, "Updated", Toast.LENGTH_SHORT).show();
                                     }
                                 });
+                                ref1.updateChildren(userMap).addOnCompleteListener(new OnCompleteListener<Void>() {
+                                    @Override
+                                    public void onComplete(@NonNull Task<Void> task) {
+                                        Toast.makeText(DetailsPothole.this, "Updated", Toast.LENGTH_SHORT).show();
+                                    }
+                                });
+
 
                                 layout_proof.setVisibility(View.GONE);
                             }

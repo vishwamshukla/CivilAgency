@@ -244,6 +244,21 @@
                         android:layout_height="wrap_content"
                         android:textSize="20sp"
                         android:text="Not"/>
+                    <TextView
+                        android:layout_marginTop="15dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="uid"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/potholes_uid"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="20sp"
+                        android:text="Not"/>
 
 
                     <com.google.android.material.card.MaterialCardView

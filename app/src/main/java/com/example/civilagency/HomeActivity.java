@@ -50,6 +50,7 @@ public class HomeActivity extends AppCompatActivity implements ImageAdapter.OnIt
     public static final String EXTRA_COMMENT = "comment";
     public static final String EXTRA_PHONE = "phone";
     public static final String EXTRA_TIMEKEY = "timeKey";
+    public static final String EXTRA_USERID = "userId";
 
     private String Lang;
     private ActionBarDrawerToggle nToggle;
@@ -260,6 +261,7 @@ public class HomeActivity extends AppCompatActivity implements ImageAdapter.OnIt
         detailIntent.putExtra(EXTRA_COMMENT, clickeditem.getmComment());
         detailIntent.putExtra(EXTRA_PHONE, clickeditem.getmPhone());
         detailIntent.putExtra(EXTRA_TIMEKEY, clickeditem.getmTimeKey());
+        detailIntent.putExtra(EXTRA_USERID, clickeditem.getmUserId());
 
         startActivity(detailIntent);
 
