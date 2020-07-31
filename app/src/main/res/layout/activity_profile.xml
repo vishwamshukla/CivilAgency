@@ -117,7 +117,7 @@
                             android:id="@+id/total_pothole_reported"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="123"
+                            android:text="@string/number"
                             android:textSize="30sp"
                             android:includeFontPadding="false"
                             android:layout_centerInParent="true"
@@ -130,7 +130,7 @@
                             android:id="@+id/total_pothole_reported_desc"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:text="Potholes Reported"
+                            android:text="@string/potholes_reported"
                             android:includeFontPadding="false"
                             android:textSize="15sp"
                             android:layout_below="@id/total_pothole_reported"
@@ -173,7 +173,7 @@
                             android:id="@+id/total_pothole_fixed"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="123"
+                            android:text="@string/number2"
                             android:textSize="30sp"
                             android:includeFontPadding="false"
                             android:layout_centerInParent="true"
@@ -187,7 +187,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:textAlignment="center"
-                            android:text="Potholes Fixed"
+                            android:text="@string/Potholes_Fixed"
                             android:includeFontPadding="false"
                             android:textSize="15sp"
                             android:layout_below="@id/total_pothole_fixed"
@@ -209,7 +209,7 @@
                     android:id="@+id/profile_name"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="Name"
+                    android:hint="@string/name"
                     android:layout_marginBottom="10dp">
 
                     <com.google.android.material.textfield.TextInputEditText
@@ -225,7 +225,7 @@
                     android:id="@+id/profile_username"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="Username"
+                    android:hint="@string/username"
                     android:layout_marginBottom="10dp">
 
                     <com.google.android.material.textfield.TextInputEditText
@@ -241,7 +241,7 @@
                     android:id="@+id/profile_email"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="Email"
+                    android:hint="@string/email"
                     android:layout_marginBottom="10dp">
 
                     <com.google.android.material.textfield.TextInputEditText
@@ -257,7 +257,7 @@
                     android:id="@+id/profile_phone_number"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="Phone Number"
+                    android:hint="@string/phone_number"
                     android:layout_marginBottom="10dp">
 
                     <com.google.android.material.textfield.TextInputEditText
@@ -282,7 +282,7 @@
                         android:id="@+id/update_profile"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="Update changes"
+                        android:text="@string/update_changes"
                         android:fontFamily="monospace"
                         style="?android:attr/borderlessButtonStyle"/>
 

@@ -24,7 +24,7 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:fontFamily="sans-serif-smallcaps"
-        android:text="Potholes+"
+        android:text="@string/potholes"
         android:textAlignment="center"
         android:textSize="60sp"
         android:transitionName="logo_text"
@@ -38,7 +38,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="26dp"
         android:fontFamily="serif-monospace"
-        android:text="We care beyond health"
+        android:text="@string/we_care_beyond_health"
 
         android:textAlignment="center"
         android:textSize="20sp"

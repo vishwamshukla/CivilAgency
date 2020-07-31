@@ -58,7 +58,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Report Status:"
+                        android:text="@string/report_status"
                         android:textColor="@color/colorPrimaryDark"
                         android:textSize="14sp"
                         android:textStyle="bold" />
@@ -67,7 +67,7 @@
                         android:layout_marginStart="15dp"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Completed"
+                        android:text="@string/completed"
                         android:textSize="20sp"/>
 
                 </LinearLayout>
@@ -85,7 +85,7 @@
                     android:layout_marginTop="15dp"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Image"
+                    android:text="@string/image"
                     android:textColor="@color/colorPrimaryDark"
                     android:textSize="14sp"
                     android:textStyle="bold" />
@@ -122,7 +122,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="15dp"
-                    android:text="Location"
+                    android:text="@string/location"
                     android:textColor="@color/colorPrimaryDark"
                     android:textSize="14sp"
                     android:textStyle="bold" />
@@ -147,7 +147,7 @@
                     android:layout_marginTop="15dp"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Type"
+                    android:text="@string/type"
                     android:textColor="@color/colorPrimaryDark"
                     android:textSize="14sp"
                     android:textStyle="bold" />
@@ -156,14 +156,14 @@
                     android:id="@+id/pothole_type_textView"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Not assigned"
+                    android:text="not_assigned"
                     android:textSize="20sp"/>
 
                 <TextView
                     android:layout_marginTop="15dp"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Landmark"
+                    android:text="@string/landmark"
                     android:textColor="@color/colorPrimaryDark"
                     android:textSize="14sp"
                     android:textStyle="bold" />
@@ -173,13 +173,13 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:textSize="20sp"
-                    android:text="Not assigned"/>
+                    android:text="not_assigned"/>
 
                 <TextView
                     android:layout_marginTop="15dp"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Address"
+                    android:text="@string/address"
                     android:textColor="@color/colorPrimaryDark"
                     android:textSize="14sp"
                     android:textStyle="bold" />
@@ -189,13 +189,13 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:textSize="20sp"
-                    android:text="Not assigned"/>
+                    android:text="not_assigned"/>
 
                 <TextView
                     android:layout_marginTop="15dp"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Dimensions"
+                    android:text="@string/dimensions"
                     android:textColor="@color/colorPrimaryDark"
                     android:textSize="14sp"
                     android:textStyle="bold" />
@@ -205,13 +205,13 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:textSize="20sp"
-                    android:text="Not assigned"/>
+                    android:text="not_assigned"/>
 
                 <TextView
                     android:layout_marginTop="15dp"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Comments"
+                    android:text="@string/comments"
                     android:textColor="@color/colorPrimaryDark"
                     android:textSize="14sp"
                     android:textStyle="bold" />
@@ -221,7 +221,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:textSize="20sp"
-                    android:text="Not assigned"/>
+                    android:text="not_assigned"/>
 
                 <com.google.android.material.card.MaterialCardView
                     android:layout_marginTop="15dp"
@@ -238,7 +238,7 @@
                         android:layout_height="wrap_content"
                         android:fontFamily="monospace"
                         style="?android:attr/borderlessButtonStyle"
-                        android:text="Back"
+                        android:text="@string/back"
                         android:textAllCaps="false"/>
 
                 </com.google.android.material.card.MaterialCardView>

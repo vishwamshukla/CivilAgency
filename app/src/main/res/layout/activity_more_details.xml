@@ -21,7 +21,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="sans-serif-smallcaps"
-        android:text="We'd like to know more about you."
+        android:text="@string/we_d_like_to_know_more_about_you"
         android:transitionName="logo_text"
         android:textSize="30sp"
         android:textColor="#000"/>
@@ -36,7 +36,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/name3"
-            android:hint="Name"
+            android:hint="@string/name"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
             <com.google.android.material.textfield.TextInputEditText
                 android:layout_width="match_parent"
@@ -48,7 +48,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/username3"
-            android:hint="Username"
+            android:hint="@string/username"
             app:counterEnabled="true"
             app:counterMaxLength="15"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
@@ -76,7 +76,7 @@
         android:id="@+id/submit_button"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Submit"
+        android:text="@string/submit"
         android:layout_marginTop="10dp"
         android:background="#000"
         android:transitionName="button_tran"
