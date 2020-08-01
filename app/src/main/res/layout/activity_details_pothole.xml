@@ -8,7 +8,6 @@
     android:orientation="vertical">
 
 
-
     <include
         layout="@layout/action_bar"
         android:id="@+id/action_bar"/>
@@ -143,139 +142,189 @@
 
                     <LinearLayout
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content">
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="15dp">
 
                         <TextView
-                            android:layout_marginTop="15dp"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Type"
+                            android:text="Type: "
                             android:textColor="@color/colorPrimaryDark"
                             android:textSize="14sp"
                             android:textStyle="bold" />
 
                         <TextView
+                            android:layout_marginLeft="5dp"
                             android:id="@+id/pothole_type_textView"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="Not assigned"
-                            android:textSize="20sp"/>
+                            android:textSize="15sp"/>
 
                     </LinearLayout>
 
-                    <TextView
-                        android:layout_marginTop="15dp"
+                    <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="Landmark"
-                        android:textColor="@color/colorPrimaryDark"
-                        android:textSize="14sp"
-                        android:textStyle="bold" />
+                        android:layout_marginTop="15dp">
 
-                    <TextView
-                        android:id="@+id/pothole_landmark_textview"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:textSize="20sp"
-                        android:text="Not assigned"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Landmark: "
+                            android:textColor="@color/colorPrimaryDark"
+                            android:textSize="14sp"
+                            android:textStyle="bold" />
 
-                    <TextView
-                        android:layout_marginTop="15dp"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="Address"
-                        android:textColor="@color/colorPrimaryDark"
-                        android:textSize="14sp"
-                        android:textStyle="bold" />
+                        <TextView
+                            android:layout_marginLeft="5dp"
+                            android:id="@+id/pothole_landmark_textview"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Not assigned"
+                            android:textSize="15sp"/>
 
-                    <TextView
-                        android:id="@+id/pothole_address_textView"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:textSize="20sp"
-                        android:text="Not assigned"/>
+                    </LinearLayout>
 
-                    <TextView
-                        android:layout_marginTop="15dp"
+                    <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="Dimensions"
-                        android:textColor="@color/colorPrimaryDark"
-                        android:textSize="14sp"
-                        android:textStyle="bold" />
+                        android:layout_marginTop="15dp">
 
-                    <TextView
-                        android:id="@+id/pothole_dimension_textview"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:textSize="20sp"
-                        android:text="Not assigned"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Address: "
+                            android:textColor="@color/colorPrimaryDark"
+                            android:textSize="14sp"
+                            android:textStyle="bold" />
 
-                    <TextView
-                        android:layout_marginTop="15dp"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="Comments"
-                        android:textColor="@color/colorPrimaryDark"
-                        android:textSize="14sp"
-                        android:textStyle="bold" />
+                        <TextView
+                            android:layout_marginLeft="5dp"
+                            android:id="@+id/pothole_address_textView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Not assigned"
+                            android:textSize="15sp"/>
 
-                    <TextView
-                        android:id="@+id/potholes_comments_textview"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:textSize="20sp"
-                        android:text="Not assigned"/>
+                    </LinearLayout>
 
-                    <TextView
-                        android:layout_marginTop="15dp"
+                    <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="Phone"
-                        android:textColor="@color/colorPrimaryDark"
-                        android:textSize="14sp"
-                        android:textStyle="bold" />
+                        android:layout_marginTop="15dp">
 
-                    <TextView
-                        android:id="@+id/potholes_phonenumber"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:textSize="20sp"
-                        android:text="Not"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Dimensions: "
+                            android:textColor="@color/colorPrimaryDark"
+                            android:textSize="14sp"
+                            android:textStyle="bold" />
 
-                    <TextView
-                        android:layout_marginTop="15dp"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="Time - Date"
-                        android:textColor="@color/colorPrimaryDark"
-                        android:textSize="14sp"
-                        android:textStyle="bold" />
+                        <TextView
+                            android:layout_marginLeft="5dp"
+                            android:id="@+id/pothole_dimension_textview"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Not assigned"
+                            android:textSize="15sp"/>
 
-                    <TextView
-                        android:id="@+id/potholes_timekey"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:textSize="20sp"
-                        android:text="Not"/>
-                    <TextView
-                        android:visibility="gone"
-                        android:layout_marginTop="15dp"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="uid"
-                        android:textColor="@color/colorPrimaryDark"
-                        android:textSize="14sp"
-                        android:textStyle="bold" />
+                    </LinearLayout>
 
-                    <TextView
-                        android:visibility="gone"
-                        android:id="@+id/potholes_uid"
+                    <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:textSize="20sp"
-                        android:text="Not"/>
+                        android:layout_marginTop="15dp">
 
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Comments: "
+                            android:textColor="@color/colorPrimaryDark"
+                            android:textSize="14sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_marginLeft="5dp"
+                            android:id="@+id/potholes_comments_textview"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Not assigned"
+                            android:textSize="15sp"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="15dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Phone: "
+                            android:textColor="@color/colorPrimaryDark"
+                            android:textSize="14sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_marginLeft="5dp"
+                            android:id="@+id/potholes_phonenumber"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Not assigned"
+                            android:textSize="15sp"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="15dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Time - Date: "
+                            android:textColor="@color/colorPrimaryDark"
+                            android:textSize="14sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_marginLeft="5dp"
+                            android:id="@+id/potholes_timekey"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Not assigned"
+                            android:textSize="15sp"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="15dp">
+
+                        <TextView
+                            android:visibility="gone"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="User id: "
+                            android:textColor="@color/colorPrimaryDark"
+                            android:textSize="14sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:visibility="gone"
+                            android:layout_marginLeft="5dp"
+                            android:id="@+id/potholes_uid"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Not assigned"
+                            android:textSize="15sp"/>
+
+                    </LinearLayout>
 
                     <com.google.android.material.card.MaterialCardView
                         android:layout_marginTop="15dp"
