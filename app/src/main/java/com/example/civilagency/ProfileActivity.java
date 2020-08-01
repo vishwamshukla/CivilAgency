@@ -28,6 +28,7 @@
  import com.google.firebase.storage.StorageTask;
  import com.squareup.picasso.Picasso;
  import com.theartofdev.edmodo.cropper.CropImage;
+ import com.twitter.sdk.android.core.models.User;
 
  import java.util.HashMap;
 
@@ -118,6 +119,7 @@
          userMap.put("email", email1.getEditText().getText().toString());
          userMap.put("phone", phone1.getEditText().getText().toString());
          ref.child(currentUserID).updateChildren(userMap);
+         UsersRef1.child(currentUserID).updateChildren(userMap);
 
          //startActivity(new Intent(ReceptionProfileActivity.this, ReceptionProfileActivity.class));
          Toast.makeText(ProfileActivity.this, "Profile saved", Toast.LENGTH_SHORT).show();

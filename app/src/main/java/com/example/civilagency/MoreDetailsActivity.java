@@ -14,6 +14,7 @@ import com.google.android.material.textfield.TextInputLayout;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.iid.FirebaseInstanceId;
 
 import java.util.HashMap;
 
@@ -38,7 +39,7 @@ public class MoreDetailsActivity extends AppCompatActivity {
         mAuth = FirebaseAuth.getInstance();
         currentUserID = mAuth.getCurrentUser().getUid();
         UsersRef = FirebaseDatabase.getInstance().getReference().child("Users").child("Civil").child(currentUserID);
-        UsersRef1 = FirebaseDatabase.getInstance().getReference().child("users").child("civil");
+        UsersRef1 = FirebaseDatabase.getInstance().getReference().child("users");
         name3 = findViewById(R.id.name3);
         username3= findViewById(R.id.username3);
 
@@ -80,12 +81,17 @@ public class MoreDetailsActivity extends AppCompatActivity {
         }
         DatabaseReference ref = FirebaseDatabase.getInstance().getReference().child("Users").child("Civil");
         HashMap<String, Object> userMap = new HashMap<>();
+        String token_id = FirebaseInstanceId.getInstance().getToken();
         userMap.put("name", name);
         userMap.put("username", username);
         userMap.put("phone", phone);
-        userMap.put("usertype", "Civil Member");
         userMap.put("email", mAuth.getCurrentUser().getEmail().toString());
-        userMap.put("status", "Hi there!, I am a Civil Member.");
+        userMap.put("device_token",token_id);
+        userMap.put("status","Hi there, I am using Potholes+");
+        userMap.put("image","default");
+        userMap.put("thumb_image","default");
+        userMap.put("online","true");
+        userMap.put("usertype","Citizen");
         ref.child(currentUserID).updateChildren(userMap);
         UsersRef1.child(currentUserID).updateChildren(userMap);
 
