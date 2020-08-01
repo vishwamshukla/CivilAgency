@@ -199,54 +199,29 @@ public class HomeActivity extends AppCompatActivity implements ImageAdapter.OnIt
         return super.onOptionsItemSelected(item);
     }
     @Override
-    public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-        String languageToLoad = "en";
+    public boolean onNavigationItemSelected(MenuItem item) {
         switch (item.getItemId()) {
             case R.id.logout:
                 FirebaseAuth.getInstance().signOut();
                 startActivity(new Intent(HomeActivity.this, LoginActivity.class));
                 break;
-//            case R.id.about_us:
-//                startActivity(new Intent(HomeActivity.this, AboutUs.class));
-//                break;
-            case R.id.help:
-                Intent Getintent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://vishwamshukla.intelaedu.com/"));
-                startActivity(Getintent);
+            case R.id.about_us:
+                startActivity(new Intent(HomeActivity.this, AboutUs.class));
                 break;
             case R.id.map_card_view:
                 startActivity(new Intent(HomeActivity.this, MapActivity.class));
                 break;
-//            case R.id.chats:
-//                startActivity(new Intent(HomeActivity.this, ChatsActivity.class));
-//                break;
-            //case R.id.hi:
-               // Lang=("hi-rIN");
-                //break;
-            //case R.id.gu:
-              //  Lang=("gu-rIN");
-                //break;
-
-            //case R.id.ta:
-            //  Lang=("ta-rIN");
-                //break;
-
-   //         case R.id.pa:
- //               Lang=("pa-rIN");
-  //              break;
-
-    //        case R.id.mr:
-      //          Lang=("mr-rIN");
-        //        break;
-          //  default:
-            //    break;
+            case R.id.help:
+                Intent Getintent = new Intent(Intent.ACTION_VIEW,Uri.parse("https://vishwamshukla.intelaedu.com/"));
+                startActivity(Getintent);
+                break;
+            case R.id.chats:
+                startActivity(new Intent(HomeActivity.this, ChatsActivity.class));
+                break;
         }
-        Locale locale = new Locale(Lang);
-        Locale.setDefault(locale);
-        Configuration config = new Configuration();
-        config.locale = locale;
-        getBaseContext().getResources().updateConfiguration(config, getBaseContext().getResources().getDisplayMetrics());
         return false;
     }
+
 
 
     public void onItemClick(int position) {

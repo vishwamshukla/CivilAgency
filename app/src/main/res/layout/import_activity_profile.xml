@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/profileUserImage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:src="@drawable/default_profile_image"
+            android:adjustViewBounds="true" />
+
+        <TextView
+            android:id="@+id/profileUserName"
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            android:text="Display Name" />
+
+        <TextView
+            android:id="@+id/profileUserStatus"
+            android:layout_width="match_parent"
+            android:layout_height="25dp"
+            android:gravity="center"
+            android:text="Your current Status"
+            android:textStyle="italic"
+            android:textSize="17.5sp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/profileUserFriends"
+            android:layout_width="match_parent"
+            android:layout_height="25dp"
+            android:textSize="17sp"
+            android:gravity="center"
+            android:text="Total Connections: " />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/chat_profile_activity_button1"
+            android:layout_marginHorizontal="50dp"
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardBackgroundColor="@color/colorPrimary"
+            app:cardCornerRadius="5dp">
+
+            <Button
+                android:textSize="15sp"
+                android:id="@+id/profileSendReqButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="monospace"
+                style="?android:attr/borderlessButtonStyle"
+                android:text="Send Request"
+                android:textAllCaps="false"/>
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/chat_profile_activity_button2"
+            android:layout_marginHorizontal="50dp"
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardBackgroundColor="@color/colorPrimary"
+            app:cardCornerRadius="5dp">
+
+            <Button
+                android:textSize="15sp"
+                android:id="@+id/profileDeclineReqButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="monospace"
+                style="?android:attr/borderlessButtonStyle"
+                android:text="Decline Request"
+                android:textAllCaps="false"/>
+
+        </androidx.cardview.widget.CardView>
+
+        <View
+            android:layout_width="wrap_content"
+            android:layout_height="20dp" />
+
+    </LinearLayout>
+
+</RelativeLayout>

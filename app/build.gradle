@@ -37,6 +37,7 @@ dependencies {
     implementation 'com.google.firebase:firebase-auth:19.3.2'
     implementation 'com.google.firebase:firebase-core:17.4.4'
     implementation 'com.google.android.material:material:1.1.0'
+    implementation 'org.jetbrains:annotations-java5:15.0'
     testImplementation 'junit:junit:4.12'
     implementation 'com.squareup.picasso:picasso:2.71828'
     androidTestImplementation 'androidx.test.ext:junit:1.1.1'
@@ -52,10 +53,10 @@ dependencies {
     implementation 'com.android.support:cardview-v7:28.0.0'
 
     //GoogleSignIn
-    implementation 'com.google.android.gms:play-services-auth:18.0.0'
+    implementation 'com.google.android.gms:play-services-auth:18.1.0'
 
     implementation 'com.squareup.picasso:picasso:2.71828'
-    implementation 'com.theartofdev.edmodo:android-image-cropper:2.7.+'
+    implementation 'com.theartofdev.edmodo:android-image-cropper:2.7.0'
 
     //glide
     implementation 'com.github.bumptech.glide:glide:4.8.0'
@@ -66,8 +67,22 @@ dependencies {
         transitive = true
     }
 
+    implementation 'com.ibm.watson:assistant:8.1.0'
+    implementation 'com.ibm.watson:text-to-speech:8.1.0'
+    implementation 'com.ibm.watson:speech-to-text:8.1.0'
+    implementation 'com.ibm.watson.developer_cloud:android-sdk:0.5.0'
+
     //GoogleMap
     implementation 'com.google.android.gms:play-services-maps:17.0.0'
     implementation 'com.google.android.gms:play-services-location:17.0.0'
+
+    implementation 'com.google.firebase:firebase-messaging:20.2.3'
+
+    implementation 'id.zelory:compressor:2.1.0'
+
+    implementation 'com.squareup.okhttp:okhttp:2.5.0'
+
+    implementation 'com.squareup.picasso:picasso:2.71828'
+    implementation 'com.jakewharton.picasso:picasso2-okhttp3-downloader:1.1.0'
 
 }

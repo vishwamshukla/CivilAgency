@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardCornerRadius="10dp"
+    android:outlineAmbientShadowColor="@android:color/darker_gray"
+    android:layout_marginTop="10dp"
+    android:layout_marginHorizontal="10dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/chat_item_image_cardView"
+            android:layout_width="105dp"
+            android:layout_height="105dp"
+            app:cardCornerRadius="52.5dp"
+            android:layout_margin="10dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:elevation="5dp"
+            android:padding="5dp">
+
+            <ImageView
+                android:scaleType="centerCrop"
+                android:id="@+id/chat_item_image_view_profile"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/default_profile_image">
+            </ImageView>
+
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:layout_marginTop="10dp"
+            android:id="@+id/chat_item_text_view_user_name"
+            android:layout_toEndOf="@id/chat_item_image_cardView"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Shantanu Patil">
+        </TextView>
+
+        <TextView
+            android:id="@+id/chat_item_text_view_message"
+            android:layout_toRightOf="@id/chat_item_image_cardView"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="15dp"
+            android:textSize="15sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="How are you?">
+        </TextView>
+
+        <TextView
+            android:layout_margin="10dp"
+            android:layout_alignParentEnd="true"
+            android:id="@+id/chat_item_text_view_user_type"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Citizen"
+            android:textSize="15sp">
+        </TextView>
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>

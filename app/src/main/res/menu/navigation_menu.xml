@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<menu xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
 
     <group android:checkableBehavior="single">
-
 
         <item android:id="@+id/map_card_view"
             android:icon="@drawable/ic_baseline_map_24"
@@ -16,24 +14,23 @@
         <item android:id="@+id/history"
             android:icon="@drawable/ic_baseline_history_24"
             android:title="@string/history"/>
-
         <item android:id="@+id/insider_program"
             android:icon="@drawable/ic_baseline_fingerprint_24"
             android:title="@string/insider_program"/>
 
         <item android:id="@+id/logout"
             android:icon="@drawable/logout"
-            android:title="@string/logout"/>
+            android:title="Logout"/>
     </group>
 
-    <item android:title="@string/communication">
+    <item android:title="Communication">
         <menu>
             <item android:id="@+id/help"
                 android:icon="@drawable/ic_menu_send"
-                android:title="@string/help"/>
+                android:title="Help"/>
             <item android:id="@+id/about_us"
                 android:icon="@drawable/ic_android_black_24dp"
-                android:title="@string/about_us"/>
+                android:title="About us"/>
         </menu>
     </item>
 </menu>

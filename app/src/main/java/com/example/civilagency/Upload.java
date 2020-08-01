@@ -1,17 +1,17 @@
 package com.example.civilagency;
 
-
 import com.google.firebase.database.Exclude;
 
 public class Upload {
 
-    private String mImageUrl, mPotholeType, mAddress,mLandmark,mDimension, mComment, mDate, mDateFull, mTime, videourl, mSeverity, mPhone, mTimeKey, mUserId, status;
+    private String mImageUrl, mPotholeType, mAddress,mLandmark,mDimension, mComment, mDate, mDateFull, mTime, videourl, mSeverity, mName, mEmail, mPhone, mUserId, mTimeKey, status;
     private String mKey;
     private String VideoDescription;
     private String VideoUri;
 
 
-    public Upload(String ImageUrl, String mPotholeType, String mAddress, String mLandmark, String mDimension, String mComment, String mDate, String mDateFull, String mTime, String mSeverity, String mPhone, String mTimeKey, String mUserId, String status) {
+    public Upload(String ImageUrl, String mPotholeType, String mAddress, String mLandmark, String mDimension, String mComment, String mDate, String mDateFull, String mTime, String mSeverity
+    , String mName, String mEmail, String mPhone, String mUserId, String mTimeKey, String status) {
         this.mImageUrl = ImageUrl;
         this.mPotholeType = mPotholeType;
         this.mAddress = mAddress;
@@ -23,10 +23,14 @@ public class Upload {
         this.mDateFull = mDateFull;
         this.mTime = mTime;
         this.mSeverity = mSeverity;
+        this.mName = mName;
+        this.mEmail = mEmail;
         this.mPhone = mPhone;
-        this.mTimeKey = mTimeKey;
         this.mUserId = mUserId;
+        this.mTimeKey = mTimeKey;
         this.status = status;
+
+
 
 
     }
@@ -115,12 +119,21 @@ public class Upload {
         this.mSeverity = mSeverity;
     }
 
-    public String getmTimeKey() {
-        return mTimeKey;
+
+    public String getmName() {
+        return mName;
     }
 
-    public void setmTimeKey(String mTimeKey) {
-        this.mTimeKey = mTimeKey;
+    public void setmName(String mName) {
+        this.mName = mName;
+    }
+
+    public String getmEmail() {
+        return mEmail;
+    }
+
+    public void setmEmail(String mEmail) {
+        this.mEmail = mEmail;
     }
 
     public String getmPhone() {
@@ -147,6 +160,14 @@ public class Upload {
         this.status = status;
     }
 
+    public String getmTimeKey() {
+        return mTimeKey;
+    }
+
+    public void setmTimeKey(String mTimeKey) {
+        this.mTimeKey = mTimeKey;
+    }
+
     @Exclude
 
     public String getKey(){
@@ -171,3 +192,4 @@ public class Upload {
     //  }
 
 }
+

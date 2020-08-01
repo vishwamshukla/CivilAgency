@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <androidx.cardview.widget.CardView
+        android:elevation="5dp"
+        app:cardCornerRadius="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="2dp"
+        android:layout_marginHorizontal="10dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/circleImageViewUserImageCardView"
+                android:layout_width="62dp"
+                android:layout_height="62dp"
+                app:cardCornerRadius="100dp"
+                android:layout_margin="15dp">
+
+                <ImageView
+                    android:id="@+id/userSingleOnlineIcon"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:srcCompat="@drawable/online_button_green"
+                    android:visibility="invisible"/>
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:layout_margin="3dp"
+                    android:id="@+id/circleImageViewUserImage"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/default_profile_image" />
+
+            </androidx.cardview.widget.CardView>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_toEndOf="@+id/circleImageViewUserImageCardView"
+                android:layout_centerVertical="true">
+
+                <TextView
+                    android:id="@+id/textViewSingleListName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/Black"
+                    android:textStyle="bold"
+                    android:text="Display Name"
+                    android:textSize="15sp"
+                    android:maxLines="1" />
+
+                <View
+                    android:layout_width="wrap_content"
+                    android:layout_height="5dp"/>
+
+                <TextView
+                    android:layout_marginBottom="2.5dp"
+                    android:id="@+id/textViewSingleListStatus"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="User Status"
+                    android:textSize="15sp"
+                    android:maxLines="1" />
+            </LinearLayout>
+
+            <androidx.cardview.widget.CardView
+                android:layout_margin="15dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:elevation="5dp"
+                app:cardCornerRadius="2dp">
+
+                <TextView
+                    android:id="@+id/usertype"
+                    android:paddingHorizontal="5dp"
+                    android:textSize="11sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=""/>
+
+            </androidx.cardview.widget.CardView>
+
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+</RelativeLayout>
