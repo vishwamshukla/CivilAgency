@@ -46,7 +46,7 @@
      private StorageReference storageProfilePrictureRef;
      private ProgressBar progressBar;
      private FirebaseAuth mAuth;
-     private DatabaseReference UsersRef;
+     private DatabaseReference UsersRef, UsersRef1;
      private String checker = "";
      String currentUserID;
 
@@ -58,6 +58,7 @@
          mAuth = FirebaseAuth.getInstance();
          currentUserID = mAuth.getCurrentUser().getUid();
          UsersRef = FirebaseDatabase.getInstance().getReference().child("Users").child("Civil").child(currentUserID);
+         UsersRef1 = FirebaseDatabase.getInstance().getReference().child("users").child(currentUserID);
 
          totalPotholeReported = findViewById(R.id.total_pothole_reported);
 
@@ -219,6 +220,7 @@
                                  userMap.put("phone", phone1.getEditText().getText().toString());
                                  userMap. put("image", myUrl);
                                  ref.child(currentUserID).updateChildren(userMap);
+                                 UsersRef1.updateChildren(userMap);
 
                                  //progressDialog.dismiss();
                                  progressBar.setVisibility(View.INVISIBLE);

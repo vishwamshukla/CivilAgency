@@ -132,7 +132,7 @@ public class ImageAdapter extends RecyclerView.Adapter<ImageAdapter.ImageViewHol
             textViewLandmark = itemView.findViewById(R.id.text_view_pothole_landmark);
             imageView = itemView.findViewById(R.id.image_view_upload);
             mprogressBar = itemView.findViewById(R.id.progress_bar_pothole);
-            potholeStatus = itemView.findViewById(R.id.text_view_pothole_statusCardView);
+            potholeStatus = itemView.findViewById(R.id.text_view_pothole_status);
             date = itemView.findViewById(R.id.text_view_pothole_date);
             phone = itemView.findViewById(R.id.potholes_phonenumber);
             severity = itemView.findViewById(R.id.image_cardView);

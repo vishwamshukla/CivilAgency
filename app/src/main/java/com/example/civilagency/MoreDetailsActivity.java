@@ -23,7 +23,7 @@ public class MoreDetailsActivity extends AppCompatActivity {
     Button submitButton;
 
     FirebaseDatabase rootNode;
-    DatabaseReference reference, UsersRef;
+    DatabaseReference reference, UsersRef, UsersRef1;
     FirebaseAuth mAuth;
     String currentUserID;
     private ProgressBar progressBar;
@@ -38,6 +38,7 @@ public class MoreDetailsActivity extends AppCompatActivity {
         mAuth = FirebaseAuth.getInstance();
         currentUserID = mAuth.getCurrentUser().getUid();
         UsersRef = FirebaseDatabase.getInstance().getReference().child("Users").child("Civil").child(currentUserID);
+        UsersRef1 = FirebaseDatabase.getInstance().getReference().child("users").child("civil");
         name3 = findViewById(R.id.name3);
         username3= findViewById(R.id.username3);
 
@@ -84,7 +85,9 @@ public class MoreDetailsActivity extends AppCompatActivity {
         userMap.put("phone", phone);
         userMap.put("usertype", "Civil Member");
         userMap.put("email", mAuth.getCurrentUser().getEmail().toString());
+        userMap.put("status", "Hi there!, I am a Civil Member.");
         ref.child(currentUserID).updateChildren(userMap);
+        UsersRef1.child(currentUserID).updateChildren(userMap);
 
 
         Toast.makeText(MoreDetailsActivity.this, "Thank you", Toast.LENGTH_SHORT).show();
