@@ -21,7 +21,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="sans-serif-smallcaps"
-        android:text="@string/welcome"
+        android:text="Welcome"
         android:transitionName="logo_text"
         android:textSize="40sp"
         android:textColor="#000"/>
@@ -30,7 +30,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="serif"
-        android:text="@string/register_to_make_india_great_again"
+        android:text="Register to make India great again"
         android:transitionName="logo_desc"
         android:textSize="18sp" />
     <LinearLayout
@@ -68,7 +68,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/email3"
-            android:hint="@string/email"
+            android:hint="Email"
             android:transitionName="email_tran"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
             <com.google.android.material.textfield.TextInputEditText
@@ -104,7 +104,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/confirmpasssword3"
-            android:hint="@string/confirm_password"
+            android:hint="Confirm Password"
             android:transitionName="password_tran"
             app:passwordToggleEnabled="true"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
@@ -120,16 +120,16 @@
         android:id="@+id/register_button"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/go"
+        android:text="Continue"
         android:layout_marginTop="10dp"
-        android:background="#000"
+        android:background="@color/colorPrimary"
         android:transitionName="button_tran"
         android:textColor="#fff"/>
     <Button
         android:id="@+id/registerToLogin_button"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/already_have_an_account_sign_in"
+        android:text="Already have an account? Sign in"
         android:transitionName="button1_tran"
         android:fontFamily="monospace"
         android:background="#00000000"/>

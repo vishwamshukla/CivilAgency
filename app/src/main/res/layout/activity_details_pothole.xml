@@ -7,6 +7,8 @@
     tools:context=".DetailsPothole"
     android:orientation="vertical">
 
+
+
     <include
         layout="@layout/action_bar"
         android:id="@+id/action_bar"/>
@@ -35,34 +37,39 @@
                     android:padding="15dp"
                     android:orientation="vertical">
 
-                    <LinearLayout
+                    <RelativeLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content">
 
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Report Status:"
-                            android:textColor="@color/colorPrimaryDark"
-                            android:textSize="14sp"
-                            android:textStyle="bold" />
+                            <TextView
+                                android:id="@+id/report_status_textView"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Report Status:"
+                                android:textColor="@color/colorPrimaryDark"
+                                android:textSize="14sp"
+                                android:textStyle="bold"
+                                android:layout_marginBottom="10dp"/>
 
-                        <TextView
-                            android:id="@+id/text_view_pothole_status"
-                            android:layout_marginStart="15dp"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Completed"
-                            android:textSize="20sp"/>
+                            <TextView
+                                android:layout_above="@id/seekbar_bar_pothole"
+                                android:layout_alignParentEnd="true"
+                                android:id="@+id/text_view_pothole_status"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Completed"
+                                android:textSize="14sp"/>
 
-                    </LinearLayout>
+                            <SeekBar
+                                android:layout_marginLeft="-10dp"
+                                android:layout_marginRight="-10dp"
+                                android:layout_below="@id/report_status_textView"
+                                android:max="4"
+                                android:id="@+id/seekbar_bar_pothole"
+                                android:layout_width="match_parent"
+                                android:layout_height="25dp"/>
 
-                    <SeekBar
-                        android:max="4"
-                        android:layout_marginTop="15dp"
-                        android:id="@+id/seekbar_bar_pothole"
-                        android:layout_width="match_parent"
-                        android:layout_height="25dp"/>
+                    </RelativeLayout>
 
                     <Button
                         android:visibility="gone"
@@ -86,7 +93,7 @@
                         app:cardCornerRadius="10dp"
                         android:id="@+id/pothole_image_layout"
                         android:layout_width="match_parent"
-                        android:layout_height="200dp">
+                        android:layout_height="400dp">
 
                         <ImageView
                             android:id="@+id/pothole_image_view"
@@ -134,21 +141,27 @@
 
                     </androidx.cardview.widget.CardView>
 
-                    <TextView
-                        android:layout_marginTop="15dp"
+                    <LinearLayout
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="Type"
-                        android:textColor="@color/colorPrimaryDark"
-                        android:textSize="14sp"
-                        android:textStyle="bold" />
+                        android:layout_height="wrap_content">
 
-                    <TextView
-                        android:id="@+id/pothole_type_textView"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="Not assigned"
-                        android:textSize="20sp"/>
+                        <TextView
+                            android:layout_marginTop="15dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Type"
+                            android:textColor="@color/colorPrimaryDark"
+                            android:textSize="14sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/pothole_type_textView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Not assigned"
+                            android:textSize="20sp"/>
+
+                    </LinearLayout>
 
                     <TextView
                         android:layout_marginTop="15dp"
@@ -229,11 +242,12 @@
                         android:layout_height="wrap_content"
                         android:textSize="20sp"
                         android:text="Not"/>
+
                     <TextView
                         android:layout_marginTop="15dp"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="Timekey"
+                        android:text="Time - Date"
                         android:textColor="@color/colorPrimaryDark"
                         android:textSize="14sp"
                         android:textStyle="bold" />
@@ -245,6 +259,7 @@
                         android:textSize="20sp"
                         android:text="Not"/>
                     <TextView
+                        android:visibility="gone"
                         android:layout_marginTop="15dp"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -254,6 +269,7 @@
                         android:textStyle="bold" />
 
                     <TextView
+                        android:visibility="gone"
                         android:id="@+id/potholes_uid"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -401,21 +417,17 @@
                     android:layout_height="wrap_content"
                     android:orientation="horizontal">
 
-                    <com.google.android.material.textfield.TextInputLayout
-                        android:layout_weight="1"
+
+                    <EditText
+                        android:drawablePadding="15dp"
+                        android:layout_width="match_parent"
                         android:id="@+id/proof_view_potholes_comments_textview"
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:hint="Comments (Optional)">
-
-                        <com.google.android.material.textfield.TextInputEditText
-                            android:drawablePadding="15dp"
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:padding="10dp"
-                            android:drawableStart="@drawable/ic_round_message_24"/>
-
-                    </com.google.android.material.textfield.TextInputLayout>
+                        android:layout_height="match_parent"
+                        android:padding="10dp"
+                        android:hint="@string/comments_optional"
+                        android:drawableStart="@drawable/ic_round_message_24"
+                        >
+                    </EditText>
 
                     <androidx.cardview.widget.CardView
                         android:layout_marginTop="7dp"
