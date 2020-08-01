@@ -46,6 +46,19 @@
             android:text="Type not found">
         </TextView>
 
+        <TextView
+            android:id="@+id/datetimeid_TextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone">
+        </TextView>
+        <TextView
+            android:id="@+id/useridTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone">
+        </TextView>
+
         <!--TODO: link this with actual DB and remove the hardcoded text-->
         <TextView
             android:id="@+id/text_view_pothole_landmark"
