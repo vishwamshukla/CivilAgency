@@ -82,6 +82,7 @@ public class MoreDetailsActivity extends AppCompatActivity {
         userMap.put("name", name);
         userMap.put("username", username);
         userMap.put("phone", phone);
+        userMap.put("usertype", "Civil Member");
         userMap.put("email", mAuth.getCurrentUser().getEmail().toString());
         ref.child(currentUserID).updateChildren(userMap);
 

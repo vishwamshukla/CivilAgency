@@ -12,6 +12,8 @@ import android.widget.ImageView;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 
+import androidx.cardview.widget.CardView;
+import androidx.core.content.ContextCompat;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.squareup.picasso.Picasso;
@@ -57,35 +59,54 @@ public class ImageAdapter extends RecyclerView.Adapter<ImageAdapter.ImageViewHol
         holder.textViewPotholeType.setText(uploadCurrent.getmPotholeType());
         holder.textViewLandmark.setText(uploadCurrent.getmLandmark());
         holder.date.setText(uploadCurrent.getmDate());
+        switch (Integer.parseInt(uploadCurrent.getmSeverity())){
+            case 1:
+                holder.severity.setCardBackgroundColor(ContextCompat.getColor(mContext.getApplicationContext(), R.color.severity_level1));
+                break;
+            case 2:
+                holder.severity.setCardBackgroundColor(ContextCompat.getColor(mContext.getApplicationContext(), R.color.severity_level2));
+                break;
+            case 3:
+                holder.severity.setCardBackgroundColor(ContextCompat.getColor(mContext.getApplicationContext(), R.color.severity_level3));
+                break;
+            case 4:
+                holder.severity.setCardBackgroundColor(ContextCompat.getColor(mContext.getApplicationContext(), R.color.severity_level4));
+                break;
+            case 5:
+                holder.severity.setCardBackgroundColor(ContextCompat.getColor(mContext.getApplicationContext(), R.color.severity_level5));
+                break;
+            default:
+                break;
+        }
         Picasso.get()
                 .load(uploadCurrent.getImageUrl())
                 .fit()
                 .centerInside()
                 .into(holder.imageView);
-        //TODO: change "Processing" with the actual status of that pothole form database.
-        setProgressBar(Progress.Processing, holder.mprogressBar, holder.potholeStaus);
+
+        setProgressBar(uploadCurrent.getStatus() == null ? "Reported" : uploadCurrent.getStatus(), holder.mprogressBar, holder.potholeStatus);
     }
 
-    public void setProgressBar(Progress progress, ProgressBar mprogressBar, TextView potholeStaus){
+    public void setProgressBar(String progress, ProgressBar mprogressBar, TextView potholeStatus){
         switch (progress) {
-            case Reported:
-                mprogressBar.setProgress(25);
-                mprogressBar.setProgressTintList(ColorStateList.valueOf(0xFFf44336));
-                break;
-            case Processing:
-                mprogressBar.setProgress(50);
-                mprogressBar.setProgressTintList(ColorStateList.valueOf(0xFFff9800));
-                break;
-            case Midway:
-                mprogressBar.setProgress(75);
-                mprogressBar.setProgressTintList(ColorStateList.valueOf(0xFFffeb3b));
-                break;
-            default:
-                mprogressBar.setProgress(100);
+            case "Completed":
+                mprogressBar.setProgress(4);
                 mprogressBar.setProgressTintList(ColorStateList.valueOf(0xFF4caf50));
                 break;
+            case "Midway":
+                mprogressBar.setProgress(3);
+                mprogressBar.setProgressTintList(ColorStateList.valueOf(0xFFffeb3b));
+                break;
+            case "Processing":
+                mprogressBar.setProgress(2);
+                mprogressBar.setProgressTintList(ColorStateList.valueOf(0xFFff9800));
+                break;
+            default:
+                mprogressBar.setProgress(1);
+                mprogressBar.setProgressTintList(ColorStateList.valueOf(0xFFf44336));
+                break;
         }
-        potholeStaus.setText(progress.toString());
+        potholeStatus.setText(progress);
     }
 
     @Override
@@ -98,8 +119,9 @@ public class ImageAdapter extends RecyclerView.Adapter<ImageAdapter.ImageViewHol
         public TextView textViewLandmark;
         public ImageView imageView;
         public ProgressBar mprogressBar;
-        public TextView potholeStaus;
+        public TextView potholeStatus;
         public TextView date;
+        public CardView severity;
         public TextView phone;
 
 
@@ -110,9 +132,10 @@ public class ImageAdapter extends RecyclerView.Adapter<ImageAdapter.ImageViewHol
             textViewLandmark = itemView.findViewById(R.id.text_view_pothole_landmark);
             imageView = itemView.findViewById(R.id.image_view_upload);
             mprogressBar = itemView.findViewById(R.id.progress_bar_pothole);
-            potholeStaus = itemView.findViewById(R.id.text_view_pothole_status);
+            potholeStatus = itemView.findViewById(R.id.text_view_pothole_statusCardView);
             date = itemView.findViewById(R.id.text_view_pothole_date);
             phone = itemView.findViewById(R.id.potholes_phonenumber);
+            severity = itemView.findViewById(R.id.image_cardView);
 
             itemView.setOnClickListener(new View.OnClickListener() {
                 @Override
