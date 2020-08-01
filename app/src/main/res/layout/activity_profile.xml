@@ -117,7 +117,7 @@
                             android:id="@+id/total_pothole_reported"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="@string/number"
+                            android:text="0"
                             android:textSize="30sp"
                             android:includeFontPadding="false"
                             android:layout_centerInParent="true"
@@ -130,7 +130,7 @@
                             android:id="@+id/total_pothole_reported_desc"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:text="@string/potholes_reported"
+                            android:text="Potholes Reported"
                             android:includeFontPadding="false"
                             android:textSize="15sp"
                             android:layout_below="@id/total_pothole_reported"
@@ -173,7 +173,7 @@
                             android:id="@+id/total_pothole_fixed"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="@string/number2"
+                            android:text="0"
                             android:textSize="30sp"
                             android:includeFontPadding="false"
                             android:layout_centerInParent="true"
@@ -187,7 +187,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:textAlignment="center"
-                            android:text="@string/Potholes_Fixed"
+                            android:text="Potholes Fixed"
                             android:includeFontPadding="false"
                             android:textSize="15sp"
                             android:layout_below="@id/total_pothole_fixed"
@@ -209,7 +209,7 @@
                     android:id="@+id/profile_name"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="@string/name"
+                    android:hint="Name"
                     android:layout_marginBottom="10dp">
 
                     <com.google.android.material.textfield.TextInputEditText
@@ -217,6 +217,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:padding="10dp"
+                        android:maxLength="20"
                         android:drawableLeft="@drawable/ic_baseline_person_24"/>
 
                 </com.google.android.material.textfield.TextInputLayout>
@@ -225,7 +226,7 @@
                     android:id="@+id/profile_username"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="@string/username"
+                    android:hint="Username"
                     android:layout_marginBottom="10dp">
 
                     <com.google.android.material.textfield.TextInputEditText
@@ -233,6 +234,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:padding="10dp"
+                        android:maxLength="15"
                         android:drawableLeft="@drawable/ic_baseline_people_alt_24"/>
 
                 </com.google.android.material.textfield.TextInputLayout>
@@ -241,7 +243,7 @@
                     android:id="@+id/profile_email"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="@string/email"
+                    android:hint="Email"
                     android:layout_marginBottom="10dp">
 
                     <com.google.android.material.textfield.TextInputEditText
@@ -249,6 +251,8 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:padding="10dp"
+                        android:maxLength="30"
+                        android:inputType="textEmailAddress"
                         android:drawableLeft="@drawable/ic_baseline_email_24"/>
 
                 </com.google.android.material.textfield.TextInputLayout>
@@ -257,7 +261,9 @@
                     android:id="@+id/profile_phone_number"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="@string/phone_number"
+                    android:hint="Phone Number"
+                    app:counterEnabled="true"
+                    app:counterMaxLength="10"
                     android:layout_marginBottom="10dp">
 
                     <com.google.android.material.textfield.TextInputEditText
@@ -265,7 +271,26 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:padding="10dp"
+                        android:maxLength="10"
+                        android:inputType="phone"
                         android:drawableLeft="@drawable/ic_baseline_phone_callback_24"/>
+
+                </com.google.android.material.textfield.TextInputLayout>
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/profile_status"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Status"
+                    android:layout_marginBottom="10dp">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:drawablePadding="15dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp"
+                        android:inputType="text"
+                        android:text="Hi there!, I am using Pothole+."
+                        android:drawableLeft="@drawable/ic_baseline_person_add_24"/>
 
                 </com.google.android.material.textfield.TextInputLayout>
 
@@ -282,7 +307,7 @@
                         android:id="@+id/update_profile"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="@string/update_changes"
+                        android:text="Update changes"
                         android:fontFamily="monospace"
                         style="?android:attr/borderlessButtonStyle"/>
 

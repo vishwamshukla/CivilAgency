@@ -78,12 +78,13 @@
         android:layout_gravity="right"
         android:elevation="0dp"
         android:layout_margin="5dp"/>
+
     <Button
         android:id="@+id/login_btn"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/go"
-        android:background="#000"
+        android:text="Continue"
+        android:background="@color/colorPrimary"
         android:transitionName="button_tran"
         android:textColor="#fff"
         android:layout_marginTop="5dp"
@@ -99,7 +100,7 @@
         android:background="#00000000"
         android:elevation="0dp"
         android:fontFamily="monospace"
-        android:text="@string/new_user_sign_up"
+        android:text="New User? Sign up"
         android:transitionName="button1_tran"
         android:textColor="#000" />
 

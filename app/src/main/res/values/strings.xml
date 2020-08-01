@@ -76,8 +76,8 @@
     <string name="map_view">Map</string>
 
 
-    <string name="number" translatable="false">123</string>
-    <string name="number2" translatable="false">123</string>
+    <string name="number" translatable="false">0</string>
+    <string name="number2" translatable="false">0</string>
     <string name="name">Name</string>
     <string name="username">Username</string>
     <string name="email">Email</string>
