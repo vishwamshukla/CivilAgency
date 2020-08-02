@@ -4,10 +4,11 @@
 
     <item android:id="@+id/chat_settings"
         android:title="Chat Profile Settings"/>
-    <item android:id="@+id/civilAgencies_list"
-        android:title="Civil Agencies"/>
 
-    <item android:id="@+id/electedRepresentatives_list"
-        android:title="Elected Representatives"/>
+<!--    <item android:id="@+id/civilAgencies_list"-->
+<!--        android:title="Civil Agencies"/>-->
+
+<!--    <item android:id="@+id/electedRepresentatives_list"-->
+<!--        android:title="Elected Representatives"/>-->
 
 </menu>

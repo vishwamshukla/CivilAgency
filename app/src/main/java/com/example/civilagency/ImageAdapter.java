@@ -59,7 +59,8 @@ public class ImageAdapter extends RecyclerView.Adapter<ImageAdapter.ImageViewHol
         holder.textViewPotholeType.setText(uploadCurrent.getmPotholeType());
         holder.textViewLandmark.setText(uploadCurrent.getmLandmark());
         holder.date.setText(uploadCurrent.getmDate());
-        switch (Integer.parseInt(uploadCurrent.getmSeverity())){
+        int severity = uploadCurrent.getmSeverity() != null ? Integer.parseInt(uploadCurrent.getmSeverity()) : 1;
+        switch (severity){
             case 1:
                 holder.severity.setCardBackgroundColor(ContextCompat.getColor(mContext.getApplicationContext(), R.color.severity_level1));
                 break;

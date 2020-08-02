@@ -59,12 +59,12 @@ public class ChatsActivity extends AppCompatActivity {
             case R.id.chat_settings:
                 startActivity(new Intent(ChatsActivity.this, ProfileActivity.class));
                 return true;
-            case R.id.civilAgencies_list:
-                startActivity(new Intent(ChatsActivity.this, CivilAgenciesActivity.class));
-                return true;
-            case R.id.electedRepresentatives_list:
-                startActivity(new Intent(ChatsActivity.this, ElectedRepresentativesActivity.class));
-                return true;
+//            case R.id.civilAgencies_list:
+//                startActivity(new Intent(ChatsActivity.this, CivilAgenciesActivity.class));
+//                return true;
+//            case R.id.electedRepresentatives_list:
+//                startActivity(new Intent(ChatsActivity.this, ElectedRepresentativesActivity.class));
+//                return true;
             default:
                 return super.onOptionsItemSelected(item);
         }
