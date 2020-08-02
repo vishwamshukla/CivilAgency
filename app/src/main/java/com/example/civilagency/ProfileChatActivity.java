@@ -74,11 +74,11 @@ public class ProfileChatActivity extends AppCompatActivity {
         mProfileDeclineReqButton.setVisibility(View.INVISIBLE);
         mProfileDeclineReqButton.setEnabled(false);
 
-        mfriendReqReference= FirebaseDatabase.getInstance().getReference().child("friend_request");
-        mDatabaseReference= FirebaseDatabase.getInstance().getReference().child("users").child(user_id);
-        mFriendDatabase= FirebaseDatabase.getInstance().getReference().child("friends");
-        mNotificationReference= FirebaseDatabase.getInstance().getReference().child("notifications");
-        mRootReference= FirebaseDatabase.getInstance().getReference();
+        mfriendReqReference=FirebaseDatabase.getInstance().getReference().child("friend_request");
+        mDatabaseReference=FirebaseDatabase.getInstance().getReference().child("users").child(user_id);
+        mFriendDatabase=FirebaseDatabase.getInstance().getReference().child("friends");
+        mNotificationReference=FirebaseDatabase.getInstance().getReference().child("notifications");
+        mRootReference=FirebaseDatabase.getInstance().getReference();
         mFirebaseUser= FirebaseAuth.getInstance().getCurrentUser();
 
         //----fOR SETTING ONLINE---

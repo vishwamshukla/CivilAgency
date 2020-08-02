@@ -43,7 +43,7 @@ public class ConnectionsFragment extends Fragment {
         mMainView = inflater.inflate(R.layout.fragment_connections, container, false);
 
         mFriendsList = (RecyclerView)mMainView.findViewById(R.id.friendRecycleList);
-        mAuth= FirebaseAuth.getInstance();
+        mAuth=FirebaseAuth.getInstance();
 
         //---CURRENT USER ID--
         mCurrent_user_id=mAuth.getCurrentUser().getUid();
@@ -51,7 +51,7 @@ public class ConnectionsFragment extends Fragment {
         mFriendDatabase.keepSynced(true);
 
         //---USERS DATA
-        mUsersDatabase= FirebaseDatabase.getInstance().getReference().child("users");
+        mUsersDatabase=FirebaseDatabase.getInstance().getReference().child("users");
         mUsersDatabase.keepSynced(true);
 
         mFriendsList.setHasFixedSize(true);

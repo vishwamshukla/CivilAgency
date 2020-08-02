@@ -80,21 +80,20 @@ public class MoreDetailsActivity extends AppCompatActivity {
             phone3.setError("Phone number is not valid");
         }
         DatabaseReference ref = FirebaseDatabase.getInstance().getReference().child("Users").child("Civil");
-        String token_id = FirebaseInstanceId.getInstance().getToken();
         HashMap<String, Object> userMap = new HashMap<>();
+        String token_id = FirebaseInstanceId.getInstance().getToken();
         userMap.put("name", name);
         userMap.put("username", username);
         userMap.put("phone", phone);
         userMap.put("email", mAuth.getCurrentUser().getEmail().toString());
         userMap.put("device_token",token_id);
-        userMap.put("status","Hi there, I am Civil Member");
+        userMap.put("status","Hi there, I am using Potholes+");
         userMap.put("image","default");
         userMap.put("thumb_image","default");
         userMap.put("online","true");
-        userMap.put("usertype","Civil Member");
+        userMap.put("usertype","Citizen");
         ref.child(currentUserID).updateChildren(userMap);
         UsersRef1.child(currentUserID).updateChildren(userMap);
-
 
 
         Toast.makeText(MoreDetailsActivity.this, "Thank you", Toast.LENGTH_SHORT).show();

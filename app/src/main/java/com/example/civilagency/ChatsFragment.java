@@ -58,7 +58,7 @@ public class ChatsFragment extends Fragment {
         //---OFFLINE FEATURE---
         mConvDatabase.keepSynced(true);
 
-        mUsersDatabase= FirebaseDatabase.getInstance().getReference().child("users");
+        mUsersDatabase=FirebaseDatabase.getInstance().getReference().child("users");
         mUsersDatabase.keepSynced(true);
 
         mMessageDatabase = FirebaseDatabase.getInstance().getReference().child("messages").child(mCurrent_user_id);

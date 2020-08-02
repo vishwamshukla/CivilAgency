@@ -209,7 +209,7 @@ public class MainChatActivity extends AppCompatActivity {
                     messageMap.put("message",message);
                     messageMap.put("seen",false);
                     messageMap.put("type","text");
-                    messageMap.put("time", ServerValue.TIMESTAMP);
+                    messageMap.put("time",ServerValue.TIMESTAMP);
                     messageMap.put("from",mCurrentUserId);
 
                     Map messageUserMap = new HashMap();
@@ -405,7 +405,7 @@ public class MainChatActivity extends AppCompatActivity {
                         messageMap.put("message",download_url);
                         messageMap.put("seen",false);
                         messageMap.put("type","image");
-                        messageMap.put("time", ServerValue.TIMESTAMP);
+                        messageMap.put("time",ServerValue.TIMESTAMP);
                         messageMap.put("from",mCurrentUserId);
 
                         Map messageUserMap = new HashMap();

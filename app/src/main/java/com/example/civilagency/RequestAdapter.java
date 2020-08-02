@@ -87,9 +87,8 @@ public class RequestAdapter extends RecyclerView.Adapter<RequestAdapter.RequestV
 
                 holder.displayName.setText(userName);
                 holder.displayStatus.setText(userStatus);
-               // Picasso.with(holder.displayImage.getContext()).load(userThumbImage).placeholder(R.drawable.user_img).into(holder.displayImage);
+                //Picasso.with(holder.displayImage.getContext()).load(userThumbImage).placeholder(R.drawable.user_img).into(holder.displayImage);
                 Picasso.get().load(userThumbImage).into(holder.displayImage);
-
 
 
             }
@@ -120,4 +119,5 @@ public class RequestAdapter extends RecyclerView.Adapter<RequestAdapter.RequestV
     }
 
 }
+
 

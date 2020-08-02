@@ -28,6 +28,7 @@
  import com.google.firebase.storage.StorageTask;
  import com.squareup.picasso.Picasso;
  import com.theartofdev.edmodo.cropper.CropImage;
+ import com.twitter.sdk.android.core.models.User;
 
  import java.util.HashMap;
 
@@ -46,7 +47,7 @@
      private StorageReference storageProfilePrictureRef;
      private ProgressBar progressBar;
      private FirebaseAuth mAuth;
-     private DatabaseReference UsersRef;
+     private DatabaseReference UsersRef, UsersRef1;
      private String checker = "";
      String currentUserID;
 
@@ -58,6 +59,7 @@
          mAuth = FirebaseAuth.getInstance();
          currentUserID = mAuth.getCurrentUser().getUid();
          UsersRef = FirebaseDatabase.getInstance().getReference().child("Users").child("Civil").child(currentUserID);
+         UsersRef1 = FirebaseDatabase.getInstance().getReference().child("users").child(currentUserID);
 
          totalPotholeReported = findViewById(R.id.total_pothole_reported);
 
@@ -117,6 +119,7 @@
          userMap.put("email", email1.getEditText().getText().toString());
          userMap.put("phone", phone1.getEditText().getText().toString());
          ref.child(currentUserID).updateChildren(userMap);
+         UsersRef1.child(currentUserID).updateChildren(userMap);
 
          //startActivity(new Intent(ReceptionProfileActivity.this, ReceptionProfileActivity.class));
          Toast.makeText(ProfileActivity.this, "Profile saved", Toast.LENGTH_SHORT).show();
@@ -219,6 +222,7 @@
                                  userMap.put("phone", phone1.getEditText().getText().toString());
                                  userMap. put("image", myUrl);
                                  ref.child(currentUserID).updateChildren(userMap);
+                                 UsersRef1.updateChildren(userMap);
 
                                  //progressDialog.dismiss();
                                  progressBar.setVisibility(View.INVISIBLE);

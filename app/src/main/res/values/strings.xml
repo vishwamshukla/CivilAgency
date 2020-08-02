@@ -36,7 +36,7 @@
     <string name="hint_password" translatable="false">Password</string>
     <string name="hint_name" translatable="false">Name</string>
     <string name="hint_photo" translatable="false">Photo URL</string>
-    
+
     <string name="anonymous_signin" translatable="false">Anonymous Sign In</string>
     <string name="account_link" translatable="false">Account Linking</string>
     <string name="account_link_btn" translatable="false">Link Account</string>
@@ -131,6 +131,7 @@
     <string name="comments_optional">Comments (Optional)</string>
     <string name="is_this_the_right_number_to_contact_you">Is this the right number to contact you?</string>
     <string name="dimensions_optional">Dimensions (Optional)</string>
+    <string name="report_potholes_using_a_trip">Report a pothole using a trip</string>
 
 
 </resources>
