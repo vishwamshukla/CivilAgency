@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">ਸਿਵਲ ਏਜੰਸੀਆਂ ਲਈ ਪਥਰਾਅ +</string>
+    <string name="open">ਖੁੱਲਾ</string>
+    <string name="sign_in">ਸਾਈਨ - ਇਨ</string>
+    <string name="close">ਨੇੜੇ</string>
+    <string name="Potholes_Fixed">ਟੋਏ ਜਿਨ੍ਹਾਂ ਦੀ ਮੁਰੰਮਤ ਕੀਤੀ ਗਈ ਹੈ</string>
+    <string name="map_view">ਨਕਸ਼ਾ</string>
+    <string name="chats">ਗੱਲਬਾਤ</string>
+    <string name="insider_program">ਅੰਦਰੂਨੀ ਪ੍ਰੋਗਰਾਮ</string>
+    <string name="communication">ਸੰਚਾਰ</string>
+    <string name="help">ਮਦਦ ਕਰੋ</string>
+    <string name="about_us">ਸਾਡੇ ਬਾਰੇ</string>
+    <string name="potholes_reported">ਟੋਏ ਜੋ ਰਿਪੋਰਟ ਕੀਤੇ ਗਏ ਹਨ</string>
+    <string name="name" translatable="false">ਨਾਮ</string>
+    <string name="username" translatable="false">ਉਪਯੋਗਕਰਤਾ ਨਾਮ</string>
+    <string name="email" translatable="false">ਈ - ਮੇਲ</string>
+    <string name="phone_number" translatable="false">ਫੋਨ ਨੰਬਰ</string>
+    <string name="update_changes" translatable="false">ਕੀਤੀਆਂ ਤਬਦੀਲੀਆਂ ਨੂੰ ਅਪਡੇਟ ਕਰੋ</string>
+    <string name="completed">ਮੁਕੰਮਲ</string>
+    <string name="location">ਟਿਕਾਣਾ</string>
+    <string name="image">ਤਸਵੀਰ</string>
+    <string name="type">ਕਿਸਮ</string>
+    <string name="landmark">ਲੈਂਡਮਾਰਕ</string>
+    <string name="address">ਪਤਾ</string>
+    <string name="dimensions">ਮਾਪ</string>
+    <string name="comments">ਟਿਪਣੀਆਂ</string>
+    <string name="back">ਵਾਪਸ</string>
+    <string name="hello_there_welcome_back">ਹੈਲੋ ਤੁਹਾਡਾ ਸਵਾਗਤ ਹੈ ਵਾਪਸ</string>
+    <string name="sign_in_to_continue">ਜਾਰੀ ਰੱਖਣ ਲਈ ਸਾਈਨ ਇਨ ਕਰੋ</string>
+    <string name="email1">ਈ - ਮੇਲ</string>
+    <string name="report_status">ਰਿਪੋਰਟ ਸਥਿਤੀ:</string>
+    <string name="password">ਪਾਸਵਰਡ</string>
+    <string name="reset_password">ਪਾਸਵਰਡ ਰੀਸੈਟ ਕਰੋ</string>
+    <string name="go">ਜਾਣਾ</string>
+    <string name="new_user_sign_up">ਨਵਾਂ ਯੂਜ਼ਰ? ਸਾਇਨ ਅਪ</string>
+    <string name="potholes">ਟੋਏ +</string>
+    <string name="we_care_beyond_health">ਅਸੀਂ ਸਿਹਤ ਤੋਂ ਪਰੇ ਦੇਖਦੇ ਹਾਂ</string>
+    <string name="we_are_always_with_you">ਅਸੀਂ ਹਮੇਸ਼ਾਂ ਤੁਹਾਡੇ ਨਾਲ ਹਾਂ ...</string>
+    <string name="please_enter_your_e_mail_to_continue">ਜਾਰੀ ਰੱਖਣ ਲਈ ਕਿਰਪਾ ਕਰਕੇ ਆਪਣੇ ਈ-ਮੇਲ ਦਾਖਲ ਕਰੋ</string>
+    <string name="email2">ਈ - ਮੇਲ</string>
+    <string name="submit">ਜਮ੍ਹਾਂ ਕਰੋ</string>
+    <string name="we_d_like_to_know_more_about_you">ਅਸੀਂ ਤੁਹਾਡੇ ਬਾਰੇ ਹੋਰ ਜਾਣਨਾ ਚਾਹੁੰਦੇ ਹਾਂ.</string>
+    <string name="name1">ਨਾਮ</string>
+    <string name="username1">ਉਪਯੋਗਕਰਤਾ ਨਾਮ</string>
+    <string name="welcome">ਸਵਾਗਤ ਹੈ</string>
+    <string name="register_to_make_india_great_again">ਭਾਰਤ ਨੂੰ ਦੁਬਾਰਾ ਮਹਾਨ ਬਣਾਉਣ ਲਈ ਰਜਿਸਟਰ ਕਰੋ</string>
+    <string name="confirm_password">ਪਾਸਵਰਡ ਪੱਕਾ ਕਰੋ</string>
+    <string name="already_have_an_account_sign_in">ਪਹਿਲਾਂ ਤੋਂ ਹੀ ਕੋਈ ਖਾਤਾ ਹੈ? ਸਾਈਨ - ਇਨ</string>
+    <string name="email3">ਈ - ਮੇਲ</string>
+    <string name="go1">ਜਾਣਾ</string>
+    <string name="logout">ਲਾੱਗ ਆਊਟ, ਬਾਹਰ ਆਉਣਾ</string>
+    <string name="upload_image">ਤਸਵੀਰ ਅਪਲੋਡ ਕਰੋ:</string>
+    <string name="take_image_of_pothole">ਟੋਇਆਂ ਦੀ ਤਸਵੀਰ ਲਓ:</string>
+    <string name="camera">ਕੈਮਰਾ |</string>
+    <string name="gallery">ਗੈਲਰੀ</string>
+    <string name="remove_image">चित्र काढा</string>
+    <string name="severity_of_pothole">ਟੋਏ ਦੀ ਤੀਬਰਤਾ</string>
+    <string name="type_of_pothole">ਟੋਏ ਦੀ ਕਿਸਮ</string>
+    <string name="tap_here_to_modify">ਸੋਧਣ ਲਈ ਇੱਥੇ ਟੈਪ ਕਰੋ</string>
+    <string name="comments_optional">ਟਿੱਪਣੀਆਂ (ਵਿਕਲਪਿਕ)</string>
+    <string name="is_this_the_right_number_to_contact_you">ਕੀ ਇਹ ਤੁਹਾਡੇ ਨਾਲ ਸੰਪਰਕ ਕਰਨ ਲਈ ਸਹੀ ਨੰਬਰ ਹੈ?</string>
+    <string name="dimensions_optional">ਮਾਪ (ਵਿਕਲਪਿਕ)</string>
+    <string name="history">ਇਤਿਹਾਸ</string>
+    <string name="hint_email">ਈ - ਮੇਲ</string>
+    <string name="hint_password">ਪਾਸਵਰਡ</string>
+    <string name="hint_name">ਨਾਮ</string>
+</resources>

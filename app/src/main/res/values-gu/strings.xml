@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">સિવિલ એજન્સીઓ માટે ખાડાઓ +</string>
+    <string name="open">ખુલ્લા</string>
+    <string name="sign_in">સાઇન ઇન</string>
+    <string name="close">બંધ</string>
+    <string name="Potholes_Fixed" translatable="false">" ખાડાઓની મરામત કરવામાં આવે છે"</string>
+    <string name="map_view">નકશો</string>
+    <string name="chats">ગપસપો</string>
+    <string name="history">ઇતિહાસ</string>
+    <string name="insider_program">ઇનસાઇડર પ્રોગ્રામ</string>
+    <string name="communication">વાતચીત</string>
+    <string name="help">સહાય કરો</string>
+    <string name="about_us">અમારા વિશે</string>
+    <string name="potholes_reported">અહેવાલો છે કે ખાડા</string>
+    <string name="name" translatable="false">નામ</string>
+    <string name="username" translatable="false">વપરાશકર્તા નામ</string>
+    <string name="email" translatable="false">ઇમેઇલ</string>
+    <string name="phone_number" translatable="false">ફોન નંબર</string>
+    <string name="update_changes" translatable="false">કરેલા ફેરફારોને અપડેટ કરો</string>
+    <string name="report_status">અહેવાલ સ્થિતિ:</string>
+    <string name="completed">પૂર્ણ</string>
+    <string name="location">સ્થાન</string>
+    <string name="type">પ્રકાર</string>
+    <string name="image">ચિત્ર</string>
+    <string name="landmark">સીમાચિહ્ન</string>
+    <string name="address">સરનામું</string>
+    <string name="dimensions">પરિમાણો</string>
+    <string name="comments">ટિપ્પણીઓ</string>
+    <string name="back">પાછા</string>
+    <string name="hello_there_welcome_back">નમસ્તે, તમારું સ્વાગત છે</string>
+    <string name="sign_in_to_continue">ચાલુ રાખવા માટે સાઇન ઇન કરો</string>
+    <string name="email1">ઇમેઇલ</string>
+    <string name="password">પાસવર્ડ</string>
+    <string name="reset_password">પાસવર્ડ ફરીથી સેટ કરો</string>
+    <string name="go">જાઓ</string>
+    <string name="new_user_sign_up">નવા વપરાશકર્તા? સાઇન અપ કરો</string>
+    <string name="potholes">ખાડા +</string>
+    <string name="we_care_beyond_health">આપણે આરોગ્યની બહાર કાળજી રાખીએ છીએ</string>
+    <string name="we_are_always_with_you">અમે હંમેશાં તમારી સાથે ...</string>
+    <string name="please_enter_your_e_mail_to_continue">કૃપા કરીને ચાલુ રાખવા માટે તમારું ઇ-મેલ દાખલ કરો</string>
+    <string name="email2">ઇમેઇલ</string>
+    <string name="submit">સબમિટ કરો</string>
+    <string name="we_d_like_to_know_more_about_you">અમે તમારા વિશે વધુ જાણવા માંગીએ છીએ.</string>
+    <string name="name1">નામ</string>
+    <string name="username1">વપરાશકર્તા નામ</string>
+    <string name="welcome">સ્વાગત છે</string>
+    <string name="register_to_make_india_great_again">ભારતને ફરીથી મહાન બનાવવા માટે નોંધણી કરો</string>
+    <string name="confirm_password">પાસવર્ડની પુષ્ટિ કરો</string>
+    <string name="already_have_an_account_sign_in">પહેલેથી ખાતું છે? સાઇન ઇન કરો</string>
+    <string name="email3">ઇમેઇલ</string>
+    <string name="go1" translatable="false">જાઓ</string>
+    <string name="logout">લૉગ આઉટ</string>
+    <string name="upload_image">ચિત્ર અપલોડ કરો:</string>
+    <string name="take_image_of_pothole">ખાડાઓનું ચિત્ર લો:</string>
+    <string name="camera">કમેરો |</string>
+    <string name="gallery">ગેલેરી</string>
+    <string name="remove_image">ચિત્ર દૂર કરો</string>
+    <string name="severity_of_pothole">પોથોલની તીવ્રતા</string>
+    <string name="type_of_pothole">પોથોલનો પ્રકાર</string>
+    <string name="tap_here_to_modify">સુધારવા માટે અહીં ટેપ કરો</string>
+    <string name="comments_optional">ટિપ્પણીઓ (વૈકલ્પિક)</string>
+    <string name="is_this_the_right_number_to_contact_you">શું તમારો સંપર્ક કરવા માટે આ યોગ્ય નંબર છે?</string>
+    <string name="dimensions_optional">પરિમાણો (વૈકલ્પિક)</string>
+    <string name="hint_email">ઇમેઇલ</string>
+    <string name="hint_password">પાસવર્ડ</string>
+    <string name="hint_name">નામ</string>
+</resources>

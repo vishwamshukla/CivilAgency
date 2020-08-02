@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">नागरी एजन्सींसाठी खड्डे +</string>
+    <string name="open">उघडा</string>
+    <string name="sign_in">साइन इन करा</string>
+    <string name="close">बंद</string>
+    <string name="Potholes_Fixed">दुरुस्त केलेले खड्डे</string>
+    <string name="map_view">नकाशा</string>
+    <string name="chats">गप्पा</string>
+    <string name="history">इतिहास</string>
+    <string name="insider_program">अंतर्गत कार्यक्रम</string>
+    <string name="communication">संप्रेषण</string>
+    <string name="help">मदत</string>
+    <string name="about_us">आमच्याबद्दल</string>
+    <string name="potholes_reported">खड्डे जे कळविले जातात</string>
+    <string name="name" translatable="false">नाव</string>
+    <string name="username" translatable="false">वापरकर्तानाव</string>
+    <string name="email" translatable="false">ईमेल</string>
+    <string name="phone_number" translatable="false">फोन नंबर</string>
+    <string name="update_changes" translatable="false">केलेले बदल अद्यतनित करा</string>
+    <string name="report_status">अहवाल स्थितीः</string>
+    <string name="completed">पूर्ण</string>
+    <string name="location">स्थान</string>
+    <string name="image">चित्र</string>
+    <string name="type">प्रकार</string>
+    <string name="landmark">लँडमार्क</string>
+    <string name="address">पत्ता</string>
+    <string name="dimensions">परिमाण</string>
+    <string name="comments">टिप्पण्या</string>
+    <string name="back">परत</string>
+    <string name="hello_there_welcome_back">नमस्कार तुमचे परत स्वागत आहे</string>
+    <string name="sign_in_to_continue">सुरू ठेवण्यासाठी साइन इन करा</string>
+    <string name="email1">ईमेल</string>
+    <string name="password">संकेतशब्द</string>
+    <string name="reset_password">संकेतशब्द रीसेट करा</string>
+    <string name="go">जा</string>
+    <string name="new_user_sign_up">नवीन वापरकर्ता? साइन अप करा</string>
+    <string name="potholes">खड्डे +</string>
+    <string name="we_care_beyond_health">आपण आरोग्यापलीकडे काळजी घेतो</string>
+    <string name="we_are_always_with_you">आम्ही नेहमीच तुझ्याबरोबर असतो ...</string>
+    <string name="please_enter_your_e_mail_to_continue">कृपया सुरू ठेवण्यासाठी आपला ई-मेल प्रविष्ट करा</string>
+    <string name="email2">ईमेल</string>
+    <string name="submit">प्रस्तुत करणे</string>
+    <string name="we_d_like_to_know_more_about_you">आम्ही आपल्याबद्दल अधिक जाणून घेऊ इच्छितो.</string>
+    <string name="name1">नाव</string>
+    <string name="username1">वापरकर्तानाव</string>
+    <string name="welcome">स्वागत आहे</string>
+    <string name="register_to_make_india_great_again">भारत पुन्हा महान बनविण्यासाठी नोंदणी करा</string>
+    <string name="confirm_password">पासवर्डची पुष्टी करा</string>
+    <string name="already_have_an_account_sign_in">आधीपासूनच एक खाते आहे? साइन इन करा</string>
+    <string name="email3">ईमेल</string>
+    <string name="go1">जा</string>
+    <string name="logout">बाहेर पडणे</string>
+    <string name="upload_image">चित्र अपलोड करा:</string>
+    <string name="take_image_of_pothole">खड्ड्यांचे चित्र घ्या:</string>
+    <string name="camera">कॅमेरा |</string>
+    <string name="gallery">गॅलरी</string>
+    <string name="remove_image">चित्र काढा</string>
+    <string name="severity_of_pothole">खड्डा खडकांची तीव्रता</string>
+    <string name="type_of_pothole">खड्डा प्रकार</string>
+    <string name="tap_here_to_modify">सुधारित करण्यासाठी येथे टॅप करा</string>
+    <string name="comments_optional">टिप्पण्या (पर्यायी)</string>
+    <string name="is_this_the_right_number_to_contact_you">आपल्याशी संपर्क साधण्यासाठी हा योग्य नंबर आहे?</string>
+    <string name="dimensions_optional">परिमाण (पर्यायी)</string>
+    <string name="hint_email">ईमेल</string>
+    <string name="hint_password">संकेतशब्द</string>
+    <string name="hint_name">नाव</string>
+</resources>

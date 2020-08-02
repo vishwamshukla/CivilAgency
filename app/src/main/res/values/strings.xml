@@ -32,11 +32,11 @@
     <string name="loading" translatable="false">Loading…</string>
     <string name="signed_out" translatable="false">Signed Out</string>
 
-    <string name="hint_email" translatable="false">Email</string>
-    <string name="hint_password" translatable="false">Password</string>
-    <string name="hint_name" translatable="false">Name</string>
+    <string name="hint_email">Email</string>
+    <string name="hint_password">Password</string>
+    <string name="hint_name">Name</string>
     <string name="hint_photo" translatable="false">Photo URL</string>
-
+    
     <string name="anonymous_signin" translatable="false">Anonymous Sign In</string>
     <string name="account_link" translatable="false">Account Linking</string>
     <string name="account_link_btn" translatable="false">Link Account</string>
@@ -120,7 +120,6 @@
     <string name="take_image_of_pothole">Take image of pothole</string>
     <string name="camera">Camera |</string>
     <string name="gallery">Gallery</string>
-    <string name="remove_image">Remove Image</string>
     <string name="severity_of_pothole">Severity of Pothole</string>
     <string name="type_of_pothole">Type of Pothole</string>
     <string name="landmark">Landmark</string>
@@ -131,7 +130,8 @@
     <string name="comments_optional">Comments (Optional)</string>
     <string name="is_this_the_right_number_to_contact_you">Is this the right number to contact you?</string>
     <string name="dimensions_optional">Dimensions (Optional)</string>
-    <string name="report_potholes_using_a_trip">Report a pothole using a trip</string>
+    <string name="remove_image">Remove Image</string>
+    <string name="report_potholes_using_a_trip">Report potholes using a trip</string>
 
 
 </resources>

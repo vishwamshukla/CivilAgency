@@ -62,4 +62,7 @@
     <string name="comments_optional">टिप्पणियां (वैकल्पिक)</string>
     <string name="is_this_the_right_number_to_contact_you">क्या यह आपसे संपर्क करने के लिए सही संख्या है?</string>
     <string name="dimensions_optional">आयाम (वैकल्पिक)</string>
+    <string name="hint_email">ईमेल</string>
+    <string name="hint_password">कुंजिका</string>
+    <string name="hint_name">नाम</string>
 </resources>

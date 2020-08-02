@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">குழிகள் + சிவில் முகவர் நிறுவனங்களுக்கு</string>
+    <string name="open">திறந்த</string>
+    <string name="sign_in">உள்நுழைக</string>
+    <string name="close">நெருக்கமான</string>
+    <string name="Potholes_Fixed">பழுதுபார்க்கப்பட்ட குழிகள்</string>
+    <string name="map_view">வரைபடம்</string>
+    <string name="chats">அரட்டைகள்</string>
+    <string name="history">வரலாறு</string>
+    <string name="insider_program">உள் திட்டம்</string>
+    <string name="communication">தொடர்பு</string>
+    <string name="about_us">எங்களை பற்றி</string>
+    <string name="potholes_reported">புகாரளிக்கப்பட்ட குழிகள்</string>
+    <string name="username" translatable="false">பயனர்பெயர்</string>
+    <string name="email" translatable="false">மின்னஞ்சல்</string>
+    <string name="phone_number" translatable="false">தொலைபேசி எண்</string>
+    <string name="update_changes" translatable="false">செய்யப்பட்ட மாற்றங்களைப் புதுப்பிக்கவும்</string>
+    <string name="report_status">அறிக்கை நிலை:</string>
+    <string name="completed">நிறைவு</string>
+    <string name="image">படம்</string>
+    <string name="location">இடம்</string>
+    <string name="type">வகை</string>
+    <string name="landmark">மைல்கல்</string>
+    <string name="address">முகவரி</string>
+    <string name="dimensions">பரிமாணங்கள்</string>
+    <string name="comments">கருத்துரைகள்</string>
+    <string name="back">மீண்டும்</string>
+    <string name="sign_in_to_continue">தொடர உள்நுழைக</string>
+    <string name="email1">மின்னஞ்சல்</string>
+    <string name="password">கடவுச்சொல்</string>
+    <string name="reset_password">கடவுச்சொல்லை மீட்டமைக்க</string>
+    <string name="go">போ</string>
+    <string name="new_user_sign_up">புதிய பயனர்? பதிவுபெறுக</string>
+    <string name="potholes">குழிகள் +</string>
+    <string name="we_care_beyond_health">நாங்கள் ஆரோக்கியத்திற்கு அப்பாற்பட்டவர்கள்</string>
+    <string name="we_are_always_with_you">நாங்கள் எப்போதும் உங்களுடன் இருக்கிறோம் ...</string>
+    <string name="please_enter_your_e_mail_to_continue">தொடர உங்கள் மின்னஞ்சலை உள்ளிடவும்</string>
+    <string name="email2">மின்னஞ்சல்</string>
+    <string name="submit">சமர்ப்பிக்கவும்</string>
+    <string name="we_d_like_to_know_more_about_you">உங்களைப் பற்றி மேலும் அறிய நாங்கள் விரும்புகிறோம்.</string>
+    <string name="name">பெயர்</string>
+    <string name="name1">பெயர்</string>
+    <string name="username1">பயனர்பெயர்</string>
+    <string name="welcome">வரவேற்பு</string>
+    <string name="register_to_make_india_great_again">இந்தியாவை மீண்டும் சிறப்பானதாக பதிவு செய்யுங்கள்</string>
+    <string name="confirm_password">கடவுச்சொல்லை உறுதிப்படுத்தவும்</string>
+    <string name="already_have_an_account_sign_in">ஏற்கனவே ஒரு கணக்கு உள்ளதா? உள்நுழைக</string>
+    <string name="email3">மின்னஞ்சல்</string>
+    <string name="go1">போ</string>
+    <string name="logout">வெளியேறு</string>
+    <string name="help">உதவி</string>
+    <string name="upload_image">பதிவேற்ற படம்:</string>
+    <string name="take_image_of_pothole">குழிகளின் படத்தை எடுத்துக் கொள்ளுங்கள்:</string>
+    <string name="camera">கேமரா |</string>
+    <string name="gallery">கேலரி</string>
+    <string name="remove_image">படத்தை அகற்று</string>
+    <string name="severity_of_pothole">குழியின் தீவிரம்</string>
+    <string name="type_of_pothole">குழி வகை</string>
+    <string name="tap_here_to_modify">மாற்ற இங்கே தட்டவும்</string>
+    <string name="comments_optional">கருத்துரைகள் (விரும்பினால்)</string>
+    <string name="is_this_the_right_number_to_contact_you">உங்களை தொடர்பு கொள்ள இது சரியான எண்ணா?</string>
+    <string name="dimensions_optional">பரிமாணங்கள் (விரும்பினால்)</string>
+    <string name="hello_there_welcome_back">வணக்கம், மீண்டும் வருக</string>
+    <string name="hint_email">மின்னஞ்சல்</string>
+    <string name="hint_password">கடவுச்சொல்</string>
+    <string name="hint_name">பெயர்</string>
+</resources>
