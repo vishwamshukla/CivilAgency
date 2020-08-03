@@ -205,7 +205,7 @@ public class DetailsPothole extends AppCompatActivity {
                             layout_proof.setVisibility(View.VISIBLE);
 
                             button_remove_image = findViewById(R.id.proof_view_pothole_remove_image_button);
-                            CardView image_layout = findViewById(R.id.pothole_image_layout);
+                            CardView image_layout = findViewById(R.id.proof_view_pothole_image_layout);
                             proof_view_pothole_image_view = findViewById(R.id.proof_view_pothole_image_view);
 
                             image_layout.setOnClickListener(new View.OnClickListener() {
@@ -232,6 +232,8 @@ public class DetailsPothole extends AppCompatActivity {
                             findViewById(R.id.proof_view_button_continue).setOnClickListener(new View.OnClickListener() {
                                 @Override
                                 public void onClick(View view) {
+                                    Toast.makeText(getApplicationContext(), "Uploading...", Toast.LENGTH_SHORT).show();
+                                    layout_proof.setVisibility(View.GONE);
                                     uploadFile();
 //                                    DatabaseReference ref = FirebaseDatabase.getInstance().getReference().child("Reports").child(timeKey);
 //                                    DatabaseReference ref1 = FirebaseDatabase.getInstance().getReference().child("Users").child("Citizens").child(userId).child("potholeReports").child(timeKey);
