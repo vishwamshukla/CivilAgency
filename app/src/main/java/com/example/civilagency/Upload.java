@@ -6,12 +6,13 @@ import com.google.firebase.database.Exclude;
 public class Upload {
 
     private String mImageUrl, mPotholeType, mAddress,mLandmark,mDimension, mComment, mDate, mDateFull, mTime, videourl, mSeverity, mPhone, mTimeKey, mUserId, status;
+    Double mlat,mlang;
     private String mKey;
     private String VideoDescription;
     private String VideoUri;
 
 
-    public Upload(String ImageUrl, String mPotholeType, String mAddress, String mLandmark, String mDimension, String mComment, String mDate, String mDateFull, String mTime, String mSeverity, String mPhone, String mTimeKey, String mUserId, String status) {
+    public Upload(String ImageUrl, String mPotholeType, String mAddress, String mLandmark, String mDimension, String mComment, String mDate, String mDateFull, String mTime, String mSeverity, String mPhone, String mTimeKey, String mUserId, String status, Double mlat, Double mlang) {
         this.mImageUrl = ImageUrl;
         this.mPotholeType = mPotholeType;
         this.mAddress = mAddress;
@@ -27,6 +28,8 @@ public class Upload {
         this.mTimeKey = mTimeKey;
         this.mUserId = mUserId;
         this.status = status;
+        this.mlat = mlat;
+        this.mlang = mlang;
 
 
     }
@@ -145,6 +148,22 @@ public class Upload {
 
     public void setStatus(String status) {
         this.status = status;
+    }
+
+    public Double getMlat() {
+        return mlat;
+    }
+
+    public void setMlat(Double mlat) {
+        this.mlat = mlat;
+    }
+
+    public Double getMlang() {
+        return mlang;
+    }
+
+    public void setMlang(Double mlang) {
+        this.mlang = mlang;
     }
 
     @Exclude

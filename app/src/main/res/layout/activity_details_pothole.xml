@@ -126,11 +126,15 @@
                         app:cardCornerRadius="10dp">
 
                         <!-- TODO: Replace this ImageView with MapView -->
-                        <ImageView
-                            android:scaleType="centerCrop"
-                            android:src="@drawable/map"
+                        <!--com.google.android.gms.maps.MapView
                             android:layout_width="match_parent"
-                            android:layout_height="match_parent"/>
+                            android:layout_height="match_parent"
+                            android:id="@+id/google_map_v"/-->
+                        <fragment
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:id="@+id/google_map"
+                            android:name="com.google.android.gms.maps.SupportMapFragment"/>
 
                     </androidx.cardview.widget.CardView>
 
