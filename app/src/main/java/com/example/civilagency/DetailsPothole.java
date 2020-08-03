@@ -36,13 +36,23 @@ import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
 import androidx.core.content.FileProvider;
 
+import com.google.android.gms.maps.CameraUpdateFactory;
+import com.google.android.gms.maps.GoogleMap;
+import com.google.android.gms.maps.MapView;
+import com.google.android.gms.maps.OnMapReadyCallback;
+import com.google.android.gms.maps.SupportMapFragment;
+import com.google.android.gms.maps.model.LatLng;
+import com.google.android.gms.maps.model.MarkerOptions;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.OnProgressListener;
 import com.google.firebase.storage.StorageReference;
@@ -59,9 +69,10 @@ import java.util.Calendar;
 import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
+import java.util.concurrent.atomic.AtomicReference;
 
 
-public class DetailsPothole extends AppCompatActivity {
+public class DetailsPothole extends AppCompatActivity implements OnMapReadyCallback {
 
     public static final String EXTRA_URL = "image url";
     public static final String EXTRA_POTHOLE_TYPE = "pothole type";
@@ -73,6 +84,9 @@ public class DetailsPothole extends AppCompatActivity {
     public static final String EXTRA_TIMEKEY = "timeKey";
     public static final String EXTRA_USERID = "userId";
     public static final String EXTRA_STATUS = "status";
+    public static final String EXTRA_LAT = "latitude";
+    public static final String EXTRA_LANG = "longitude";
+    Double latitude,longitude;
 
     Button button_update_pothole_status;
 
@@ -106,13 +120,17 @@ public class DetailsPothole extends AppCompatActivity {
     public static final int CAMERA_REQUEST_CODE = 102;
     String currentPhotoPath;
 
-
+    GoogleMap mMap;
+    DatabaseReference locationRef;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_details_pothole);
+
+        AtomicReference<SupportMapFragment> supportMapFragment = new AtomicReference<>((SupportMapFragment) getSupportFragmentManager().findFragmentById(R.id.google_map));
+        supportMapFragment.get().getMapAsync(DetailsPothole.this);
 
         Toolbar my_toolbar = (Toolbar) findViewById(R.id.action_bar);
         my_toolbar.setTitle("");
@@ -144,6 +162,12 @@ public class DetailsPothole extends AppCompatActivity {
         final String userId = intent.getStringExtra(EXTRA_USERID);
         mDatabaseRef = FirebaseDatabase.getInstance().getReference().child("Reports").child(timeKey);
         mDatabaseRef2 = FirebaseDatabase.getInstance().getReference("Users").child("Citizens").child(userId).child("potholeReports").child(timeKey);
+        String latitude = intent.getStringExtra(EXTRA_LAT);
+        String longitude = intent.getStringExtra(EXTRA_LANG);
+        //dlatitude = Double.parseDouble(latitude);
+        //dlongitude = Double.parseDouble(longitude);
+        locationRef = FirebaseDatabase.getInstance().getReference("Users").child("Citizens").child(userId).child("potholeReports").child(timeKey);
+
 
         ImageView imageView = findViewById(R.id.pothole_image_view);
         TextView pothole_type_textView = findViewById(R.id.pothole_type_textView);
@@ -353,6 +377,31 @@ public class DetailsPothole extends AppCompatActivity {
                 progress_of_pothole = progress;
             }
         });
+    }
+
+    @Override
+    public void onMapReady(final GoogleMap googleMap) {
+        mMap=googleMap;
+        //LatLng latLng = new LatLng(latitude,longitude);
+        locationRef.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+                Double dlatitude = snapshot.child("mlat").getValue(Double.class);
+                Double dlongitude = snapshot.child("mlang").getValue(Double.class);
+
+                LatLng latLng = new LatLng(dlatitude,dlongitude);
+                mMap.addMarker(new MarkerOptions().position(latLng).title("Pothole Here"));
+                mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(latLng, 15));
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+
+            }
+        });
+        /*MarkerOptions markerOptions = new MarkerOptions().position(latLng).title("Pothole Here");
+        googleMap.animateCamera(CameraUpdateFactory.newLatLngZoom(latLng,15));
+        googleMap.addMarker(markerOptions);*/
     }
 
     private void uploadFile() {
