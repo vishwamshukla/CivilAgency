@@ -7,17 +7,10 @@
             android:icon="@drawable/ic_baseline_map_24"
             android:title="@string/map_view"/>
 
-        <item android:id="@+id/report_pothole_using_trip"
-            android:icon="@drawable/ic_baseline_directions_car_24"
-            android:title="@string/report_potholes_using_a_trip"/>
-
         <item android:id="@+id/chats"
             android:icon="@drawable/ic_round_message_24"
             android:title="@string/chats"/>
 
-        <item android:id="@+id/history"
-            android:icon="@drawable/ic_baseline_history_24"
-            android:title="@string/history"/>
         <item android:id="@+id/insider_program"
             android:icon="@drawable/ic_baseline_fingerprint_24"
             android:title="@string/insider_program"/>

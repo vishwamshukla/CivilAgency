@@ -220,6 +220,9 @@ public class HomeActivity extends AppCompatActivity implements ImageAdapter.OnIt
             case R.id.chats:
                 startActivity(new Intent(HomeActivity.this, ChatsActivity.class));
                 break;
+            case R.id.insider_program:
+                startActivity(new Intent(HomeActivity.this, RewardsActivity.class));
+                break;
         }
         return false;
     }
